@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-25T08:54:50-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">IntermediateRuby</title><author><name>Josh Thompson</name><email>joshthompson@hey.com</email></author><entry><title type="html">Example Post</title><link href="http://localhost:4000/example-post" rel="alternate" type="text/html" title="Example Post" /><published>2020-01-31T06:00:00-07:00</published><updated>2020-01-31T06:00:00-07:00</updated><id>http://localhost:4000/2019-example-post</id><content type="html" xml:base="http://localhost:4000/example-post">&lt;p&gt;Here’s an example post.&lt;/p&gt;
+
+&lt;h2 id=&quot;you-can-write-markdown&quot;&gt;You can write Markdown&lt;/h2&gt;
+
+&lt;p&gt;and use code blocks:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Greeter&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;hi&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello there&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;no&quot;&gt;Greeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;hi&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello there&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Josh Thompson</name><email>joshthompson@hey.com</email></author><summary type="html">Here’s an example post. You can write Markdown and use code blocks: class Greeter def self.hi puts &quot;hello there&quot; end end Greeter.hi =&amp;gt; &quot;hello there&quot;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/title_image.jpg" /></entry></feed>
