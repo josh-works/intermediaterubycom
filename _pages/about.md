@@ -2,7 +2,7 @@
 layout: page
 title: About
 published: true
-description: "Description of this about page."
+description: "Description of IntermediateRuby.com."
 permalink: /about
 image: ""
 ---
