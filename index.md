@@ -19,4 +19,5 @@ It took me a few years to learn what I know now. I want you to learn everything 
 
 That's what this project is all about. 
 
-<add email signup here?>
+<script async data-uid="5b13b420e3" src="https://josh-thompson.ck.page/5b13b420e3/index.js"></script>
+
