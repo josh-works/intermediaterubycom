@@ -69,5 +69,8 @@ There's lots more to come. Enter your email below, and lets get started.
 
 -Josh
 
+<script async data-uid="5b13b420e3" src="https://josh-thompson.ck.page/5b13b420e3/index.js"></script>
+
+
 1. _[Invisible Women: Data Bias in a World Designed for Men](https://www.amazon.com/Invisible-Women-Data-World-Designed/dp/1419729071)_
 2. _[The Problems with Deliberate Practice](https://commoncog.com/blog/the-problems-with-deliberate-practice/)_
