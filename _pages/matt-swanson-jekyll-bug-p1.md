@@ -9,6 +9,8 @@ image: ""
 
 _First of a short series on pairing with a super-experienced software developer to fix an open-source issue in Jekyll_
 
+<add partial for series index here here>
+
 ## Context
 
 A few weeks ago, I sent out this tweet:
@@ -75,7 +77,7 @@ Matt:
 
 > I didn't look up what this regex does...
 
-He has some guesses about portions of the RegEx, but he still _doesn't need to know it in detail_. 
+He has some guesses about portions of the Regular Expression, but he still _doesn't need to know it in detail_. 
 
 
 
