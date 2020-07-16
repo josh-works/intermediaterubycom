@@ -20,6 +20,12 @@ _This series (and more series in the future) will constantly attempt to surface 
 - `Part 3: Making that failing test pass! 🙌` (coming soon)
 - `Part 4: Making the Pull Request` (coming soon)
 
+-----------------------
+
+Want to get updates on these posts as they come out?
+
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
+
 ## Timestamps
 
 - 0:38, Setup to start working on the jekyll repository
@@ -257,13 +263,14 @@ That string that we've eliminated, `._~!$&'()+,;=@`, is a pretty common list of 
 
 So, Matt isn't worrying about this part of the regular expression as it's not related to the bug we're trying to fix. 
 
+<!-- add link to p1 here -->
+<!-- add link to p3 here -->
 
+-----------------------
 
+Want to get updates on these posts as they come out?
 
-
-<!-- add link to p2 here -->
-
-<!-- add email signup form here -->
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
 
 
  

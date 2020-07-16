@@ -16,8 +16,6 @@ _First of a short series on pairing with a super-experienced software developer 
 - `Part 3: Making that failing test pass! 🙌` (coming soon)
 - `Part 4: Making the Pull Request` (coming soon)
 
-<!-- add email signup here -->
-
 ## Context
 
 A few weeks ago, I sent out this tweet:
@@ -38,7 +36,15 @@ We finished with this pull request: [Switch slugify regex to support more Unicod
 
 I recorded the whole session, but I'm not expecting you to watch two hours of pairing - I'm editing it, heavily, to show all of the thought process and to highlight as much of the [tacit knowledge](https://commoncog.com/blog/tacit-knowledge-is-a-real-thing/) as possible. 
 
+-----------------------
+
+Want to get updates on these posts as they come out?
+
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
+
 <iframe width="560" height="315" class="youtube-video-embed" src="https://www.youtube.com/embed/_-m0MhmZfZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
 
 ## How Matt found this particular Jekyll issue
@@ -117,5 +123,8 @@ Next, head to part 2!
 
 [Part 2: Setting up the app, basic investigation, and writing a failing test]({{ site.baseurl }}{% link _pages/matt-swanson-jekyll-bug-p2.md %})
 
-<!-- add email signup form here -->
+-----------------------
 
+Want to get updates on these posts as they come out?
+
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
