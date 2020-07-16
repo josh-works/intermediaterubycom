@@ -19,7 +19,7 @@ A few weeks ago, I sent out this tweet:
 
 I ended up connecting with Matt Swanson, and he thought my plan was interesting, and was willing to help me out.
 
-Matt Swanson is _brilliant_. He's behind [Boring Rails](https://boringrails.com/), and has forgotten more about Ruby, Rails, and software development than ~I'll ever know~ I currently know. 
+Matt Swanson is _brilliant_. He's behind [Boring Rails](https://boringrails.com/), and has forgotten more about Ruby, Rails, and software development than <strike>I'll ever know</strike> I currently know. 
 
 I hope to someday learn more than he's forgotten. 🤞
 
