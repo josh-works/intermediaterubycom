@@ -7,34 +7,13 @@ permalink: /make-oss-contributions-part-1-finding-an-issue
 image: ""
 ---
 
-_First of a short series on pairing with a super-experienced software developer to fix an open-source issue in Jekyll_
+_This is the second of a short series on pairing with a super-experienced software developer to fix an open-source issue in Jekyll_
 
-### Series Index
-
-- [Part 1: How Matt found this perfectly-suited issue to fix]({{ site.baseurl }}{% link _pages/matt-swanson-jekyll-bug-p1.md %}) _you are here_
-- [Part 2: Setting up the app, basic investigation, and writing a failing test]({{ site.baseurl }}{% link _pages/matt-swanson-jekyll-bug-p2.md %})
-- `Part 3: Making that failing test pass! 🙌` (coming soon)
-- `Part 4: Making the Pull Request` (coming soon)
+{% include jekyll-bug-fix-index.md %}
 
 ## Context
 
-A few weeks ago, I sent out this tweet:
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">any Ruby devs interested in paid OSS work, recording their screen/verbalizing their thought process? <br><br>I&#39;ll process that recording, end-goal being &quot;a resource for early-career developers more quickly become mid-career developers&quot;<br><br>⁰⁰$100, hopefully will &lt; 2 hrs of your time.</p>&mdash; Josh Thompson (@josh_works) <a href="https://twitter.com/josh_works/status/1256667563963977728?ref_src=twsrc%5Etfw">May 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
-
-I ended up connecting with Matt Swanson, and he thought my plan was interesting, so we did it!
-
-Matt Swanson is _brilliant_, and I expect we'll be seeing a lot more of him around here. He's behind [Boring Rails](https://boringrails.com/), and has forgotten more about Ruby, Rails, and software development than ~I'll ever know~ I currently know. 🤞(I hope to someday learn more than he's forgotten...)
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;Do open source&quot; is common advice for devs trying to improve. But like...how do you actually do it?<br><br>Recorded a video w/ <a href="https://twitter.com/josh_works?ref_src=twsrc%5Etfw">@josh_works</a> of us<br><br>- Finding an issue<br>- Setting up codebase<br>- Fixing a bug<br>- Submitting a PR<br><br>Josh is going to pull out the highlights to share soon!</p>&mdash; matt swanson 🤔 🦢 (@_swanson) <a href="https://twitter.com/_swanson/status/1258868684921147395?ref_src=twsrc%5Etfw">May 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
-
-Before we started, Matt found this _amazing_ Jekyll github issue to work on: [slugify replaces Tamil vowel marks with hyphen #7973](https://github.com/jekyll/jekyll/issues/7973)
-
-We finished with this pull request: [Switch slugify regex to support more Unicode character groups #8167](https://github.com/jekyll/jekyll/pull/8167)
-
-I recorded the whole session, but I'm not expecting you to watch two hours of pairing - I'm editing it, heavily, to show all of the thought process and to highlight as much of the [tacit knowledge](https://commoncog.com/blog/tacit-knowledge-is-a-real-thing/) as possible. 
+Remember, a recurring theme of these videos is to highlight as much [tacit knowledge](https://commoncog.com/blog/tacit-knowledge-is-a-real-thing/) as possible. 
 
 -----------------------
 

@@ -7,18 +7,14 @@ permalink: /matt-swanson-jekyll-bug-p2
 image: ""
 ---
 
-_This is the second part of a short series on pairing with a super-experienced software developer to fix an open-source issue in Jekyll._
+_This is the third part of a short series on pairing with a super-experienced software developer to fix an open-source issue in Jekyll._
 
-_In Part 1, Matt explained how he identified [this particular issue](https://github.com/jekyll/jekyll/issues/7973) for us to work on._
+_In the last post, Matt explained how he identified [this particular issue](https://github.com/jekyll/jekyll/issues/7973) for us to work on._
 
 _This series (and more series in the future) will constantly attempt to surface the [tacit knowledge](https://commoncog.com/blog/tacit-knowledge-is-a-real-thing/) that experienced developers use to do their work._
 
-### Series Index
+{% include jekyll-bug-fix-index.md %}
 
-- [Part 1: How Matt found this perfectly-suited issue to fix]({{ site.baseurl }}{% link _pages/matt-swanson-jekyll-bug-p1.md %}) 
-- [Part 2: Setting up the app, basic investigation, and writing a failing test]({{ site.baseurl }}{% link _pages/matt-swanson-jekyll-bug-p2.md %}) _you are here_
-- `Part 3: Making that failing test pass! 🙌` (coming soon)
-- `Part 4: Making the Pull Request` (coming soon)
 
 -----------------------
 
