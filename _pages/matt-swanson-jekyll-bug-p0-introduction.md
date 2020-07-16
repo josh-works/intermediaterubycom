@@ -48,30 +48,34 @@ Cedric Chin wrote something recently that gave me language for a phenomina I'd f
 Quoting from his piece [Why Tacit Knowledge is More Important Than Deliberate Practice](https://commoncog.com/blog/tacit-knowledge-is-a-real-thing/)
 
 > Tacit knowledge is knowledge that **cannot be captured through words alone.**
-> 
+
+He goes on to say:
+
 > ...[T]acit knowledge does exist, and understanding that it does exist is one of the most useful things you can have happen to you. 
 > 
-> Once you understand that tacit knowledge exists, you will begin to see that big parts of any skill tree is tacit in nature, which means that you can go hunting for it, which in turn means you can start to ask the really useful question when it comes to expertise, which is: 
->
->> that person has it; that person is really good at it; how can I have it too?
+> Once you understand that tacit knowledge exists, you will begin to see that big parts of any skill tree is tacit in nature, which means that you can go hunting for it, which in turn means you can start to ask the really useful question when it comes to expertise, which is: _that person has it; that person is really good at it; how can I have it too?_
 
-There are communities of people who think that all knowledge one can obtain or need can be communicated directly, explicitely, in a book or a lecture.
+This tacit knowledge stands in contrast with _transmissionism_. There are communities of people, lets call them "transmissionists", who think that all knowledge one can obtain or need can be communicated directly, explicitely, in a book or a lecture.
 
-Cedric expounds on people who think this way:
+Cedric explains transmissionism thusly:
 
 > In pedagogy, this is known as ‘[transmissionism](https://andymatuschak.org/books/)’, and it is regarded amongst serious educators with the same sort of derision you and I might have about flat-earth theories today. 
 > 
-> It goes something like this: some people believe that it is possible to teach technique by explaining things to others. They think that if you can find just the right combinations of words with the right sorts of analogies; if you can really break things down into the right level of atomic details, things will magically click in their students’s heads and they will succeed. 
+> It goes something like this: some people believe that it is possible to teach technique by explaining things to others. They think that if you can find just the right combinations of words with the right sorts of analogies; if you can really break things down into the right level of atomic details, things will magically click in their students’s heads and [the students] will succeed. 
 > 
 > Such people have likely never attempted to do so in a serious manner. 
 
 I've spent hundreds of hours over the last few months (and years!) helping less experienced software developers learn their craft.
 
-Over and over again, I've seen the truth of this statement. It's completely impossible to impart useful knowledge by stating it - the individual learning the knowledge has to do it themselves. They have to drill it, practice it, make mistakes, explore the problem space, and pattern-match on examples from those who have gone before.
+Over and over again, I've seen the truth of this statement. 
+
+It's completely impossible to impart useful knowledge by stating it - the individual learning the knowledge has to do it themselves. They have to drill it, practice it, make mistakes, explore the problem space, and pattern-match on examples from those who have gone before.
+
+Cedric, again:
 
 > In other words, tacit knowledge instruction happens through things like imitation, emulation, and apprenticeship. You learn by copying what the master does, blindly, until you internalise the principles behind the actions.
 
-So, I wanted to systematically start copying the masters. How else but to do what they've done?
+So, I wanted to systematically start copying the masters, and I want to help others do the same. 
 
 ## Studying the finished product is only part of the solution
 
