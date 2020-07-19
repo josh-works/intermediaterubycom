@@ -1,4 +1,5 @@
-### Series Index
+#### Index for whole series
+
 
 - [Part 0: Series Introduction]({{ site.baseurl }}{% link _pages/matt-swanson-jekyll-bug-p0-introduction.md %}) {% if page.url == "/make-oss-contributions-part-0-introduction" %} _**you are here**_ {% endif %} 
 - [Part 1: How Matt found this perfectly-suited issue to fix]({{ site.baseurl }}{% link _pages/matt-swanson-jekyll-bug-p1.md %}){% if page.url == "/make-oss-contributions-part-1-finding-an-issue" %} _**you are here**_ {% endif %}
