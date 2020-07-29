@@ -7,3 +7,8 @@
 - `Part 3: Making that failing test pass! 🙌` (coming soon)
 - `Part 4: Making the Pull Request` (coming soon)
 
+Want to get updates on these posts as they come out?
+
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
+
+---------------------------------------
