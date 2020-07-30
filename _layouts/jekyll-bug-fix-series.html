@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="table-of-contents">
-  <h3>Pairing With Matt Swanson on a Jekyll Bug Fix Series Index</h3>
+  <h3>Jekyll Bug Fix with Matt Series Index</h3>
   
   {% capture index %}
   {% include jekyll-bug-fix-index.md %}
@@ -11,7 +11,8 @@ layout: default
   
   {{ index | markdownify }}
   
-  <h3>Table of Contents</h3>
+  <h3>{{ page.series_part }} Table of Contents</h3>
+  
   {% include toc.html html=content %}
   
   {{ content }}

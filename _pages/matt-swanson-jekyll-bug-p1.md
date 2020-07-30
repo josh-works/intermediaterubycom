@@ -5,6 +5,7 @@ published: true
 description: "When you ask someone how to get better at software development, they might tell you to make open source contributions. That advice is hard to follow if you don't know how to do this, or how long it will take, or even what you'll get out of it. This is part 1 of a series where Matt Swanson and I work together on fixing a small bug in an open-source repo. This series isn't about us, though, it's about you, and helping you learn as much as I did from pairing with a senior software developer!"
 permalink: /make-oss-contributions-part-1-finding-an-issue
 image: ""
+series_part: "Part 1"
 ---
 
 _This is the second of a short series on pairing with a super-experienced software developer to fix an open-source issue in Jekyll_

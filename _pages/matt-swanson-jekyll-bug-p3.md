@@ -5,6 +5,7 @@ published: false
 description: ""
 permalink: /matt-swanson-jekyll-bug-p3
 image: ""
+series_part: "Part 3"
 ---
 
 

@@ -5,6 +5,7 @@ published: true
 description: ""
 permalink: /matt-swanson-jekyll-bug-p2
 image: ""
+series_part: "Part 2"
 ---
 
 _This is the third part of a short series on pairing with a super-experienced software developer to fix an open-source issue in Jekyll._
