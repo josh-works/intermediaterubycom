@@ -17,6 +17,11 @@ _This series (and more series in the future) will constantly attempt to surface 
 
 -----------------------
 
+_video coming soon_
+
+Drop your email address here to get notified when it's ready:
+
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
 
 
 ## Timestamps

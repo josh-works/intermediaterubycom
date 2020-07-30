@@ -100,6 +100,9 @@ Here's the general questions you should be able to answer after watching this vi
 
 Next, head to part 2!
 
-[Part 2: Setting up the app, basic investigation, and writing a failing test]({{ site.baseurl }}{% link _pages/matt-swanson-jekyll-bug-p2.md %})
+But before you go, why not subscribe to get updates when more guides in this series are done, as well as when future guides go up?
 
------------------------
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
+
+{% include jekyll-bug-fix-index.md %}
+

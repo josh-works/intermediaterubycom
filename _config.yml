@@ -49,9 +49,8 @@ author:
   email:             joshthompson@hey.com
 
 # Custom vars
-version:             2.0.0
 github:
-  repo:              https://github.com/josh-works/josh-works.github.io
+  repo:              https://github.com/josh-works/intermediaterubycom
 
   # twitter plugin gem
 plugins:

@@ -1,13 +1,19 @@
 ---
 layout: jekyll-bug-fix-series
-title: "Making an OSS Contribution, Part 3: ..."
-published: false
+title: "Making an OSS Contribution, Part 3: Into The Weeds with RegEx"
+published: true
 description: ""
 permalink: /matt-swanson-jekyll-bug-p3
 image: ""
 series_part: "Part 3"
 ---
 
+
+_video coming soon_
+
+Drop your email address here to get notified when it's ready:
+
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
 
 
 ### Running a single test from a file
