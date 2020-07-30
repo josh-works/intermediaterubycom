@@ -146,12 +146,8 @@ And that's why this series of videos exists.
 
 To get started, jump over to part 1:
 
-{% include jekyll-bug-fix-index.md %}
-
------------------------
-
-Want to get updates on these posts as they come out?
+But before you go, why not subscribe to get updates when more guides in this series are done, as well as when future guides go up?
 
 <script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
 
-
+{% include jekyll-bug-fix-index.md %}

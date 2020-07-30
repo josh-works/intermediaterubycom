@@ -125,3 +125,14 @@ Obviously the "simplifed" ones are... simpler. So, why evaluate these regular ex
 That string that we've eliminated, `._~!$&'()+,;=@`, is a pretty common list of characters that represent all the "special" characters that exist on many keyboards. When "sanitizing" text input, trying to clean out everything but letters and spaces, these characters are a good starting point.
 
 So, Matt isn't worrying about this part of the regular expression as it's not related to the bug we're trying to fix. 
+
+
+-------------------------------
+
+Next, jump over to part 4:
+
+But before you go, why not subscribe to get updates when more guides in this series are done, as well as when future guides go up?
+
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
+
+{% include jekyll-bug-fix-index.md %}
