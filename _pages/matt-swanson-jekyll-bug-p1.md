@@ -15,18 +15,39 @@ Want to get updates on these posts as they come out?
 
 <script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
 
-## Context for Part 1
+## How to read this guide
 
 Remember, a recurring theme of these videos is to highlight as much [tacit knowledge](https://commoncog.com/blog/tacit-knowledge-is-a-real-thing/) as possible. 
+
+To that end, I've got a highly-annotated video walk-through below. Immediately after the video, I've got a list of time-stamps, showing in some detail what we cover in the video.
+
+Next, I expand on some of what we cover in the video. I'm not sure what the best order is for reading/watching the video. Maybe skim the rest of this post, then watch the video, and if needed come back and read more of what I've written.
+
+This first video covers _just_ how Matt found this issue to work on. The constraints I'd given for what to work on were:
+- Ruby-related. I had suggested a few projects, Jekyll was one of them.
+- A small enough fix that we could get plausibly get a pull request up in less than two hours
 
 -----------------------
 
 <iframe width="560" height="315" class="youtube-video-embed" src="https://www.youtube.com/embed/_-m0MhmZfZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Timestamps for video
 
+- [0:00](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=0m00s) People misrepresent how easy it is to work on open source software
+- [0:22](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=0m22s) Why it's overwhelming to jump into a project like Jekyll and just look for an issue to help with
+- [2:19](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=2m19s) exploring issues by Label
+- [2:45](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=2m45s) "good first issue", "first time only", "help wanted", "up for grab" labels
+- [4:23](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=4m23s) Overview of [this issue we're working on](https://github.com/jekyll/jekyll/issues/7973)
+- [5:08](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=5m08s) Matt Explaining/exploring this Tamil vowel mark issue, expanding upon his thought process
+- [6:09](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=6m09s) We're mega impressed with the detail of this bug report
+- [6:49](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=6m49s) Following the issue link to StackOverflow to gain even better context for this issue
+- [7:05](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=7m05s) Matt explains that he doesn't know a ton about Unicode, but that doesn't stop us from working on this issue. (phew)
+- [7:52](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=7m52s) Figuring out how `@DeepestBlue` came up with his recommended Regex from the StackOverflow answer
+- [8:25](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=8m25s) Taking some guesses at what is going on in the given Regex
+- [8:57](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=8m57s) content with the issue, Matt now walks us through the rest of the thread, and his thoughts on how to best collaborate with the Jekyll maintainers
+- [11:57](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=11m57s) Matt and I enter the picture, as Matt leaves a comment claiming the issue
 
-
-## How Matt found this particular Jekyll issue
+## How Matt found this particular Jekyll issue 
 
 This video opens with Matt saying:
 
@@ -41,8 +62,6 @@ This video opens with Matt saying:
 And we spend the rest of this short (10 minute) video learning _from Matt_ how he found such a well-suited issue for us to work on.
 
 I was particularly impressed with Matt because he was so good at _verbalizing his thought process_. So, jump in as he walks us through how he found this issue:
-
-<embed video here>
 
 - He walks through examining the _tags_ as an entry point, and how he "discards" most of the tags for further digging.
 - Once he's looking at this particular issue, what is Matt looking for, and what is he ignoring? 
