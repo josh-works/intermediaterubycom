@@ -1,5 +1,5 @@
 ---
-layout: jekyll-regex-fix-series
+layout: jekyll-bug-fix-series
 title: "Make an OSS Contribution, Part 1: Pairing with Matt Swanson on Jekyll"
 published: true
 description: "When you ask someone how to get better at software development, they might tell you to make open source contributions. That advice is hard to follow if you don't know how to do this, or how long it will take, or even what you'll get out of it. This is part 1 of a series where Matt Swanson and I work together on fixing a small bug in an open-source repo. This series isn't about us, though, it's about you, and helping you learn as much as I did from pairing with a senior software developer!"
@@ -9,18 +9,16 @@ image: ""
 
 _This is the second of a short series on pairing with a super-experienced software developer to fix an open-source issue in Jekyll_
 
-{% include jekyll-bug-fix-index.md content=content %}
-
-
-## Context
-
-Remember, a recurring theme of these videos is to highlight as much [tacit knowledge](https://commoncog.com/blog/tacit-knowledge-is-a-real-thing/) as possible. 
-
------------------------
 
 Want to get updates on these posts as they come out?
 
 <script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
+
+## Context for Part 1
+
+Remember, a recurring theme of these videos is to highlight as much [tacit knowledge](https://commoncog.com/blog/tacit-knowledge-is-a-real-thing/) as possible. 
+
+-----------------------
 
 <iframe width="560" height="315" class="youtube-video-embed" src="https://www.youtube.com/embed/_-m0MhmZfZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -104,7 +102,3 @@ Next, head to part 2!
 [Part 2: Setting up the app, basic investigation, and writing a failing test]({{ site.baseurl }}{% link _pages/matt-swanson-jekyll-bug-p2.md %})
 
 -----------------------
-
-Want to get updates on these posts as they come out?
-
-<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>

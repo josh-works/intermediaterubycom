@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: jekyll-bug-fix-series
 title: "Making an OSS Contribution, Part 2: Getting our first failing test"
 published: true
 description: ""
@@ -12,8 +12,6 @@ _This is the third part of a short series on pairing with a super-experienced so
 _In the last post, Matt explained how he identified [this particular issue](https://github.com/jekyll/jekyll/issues/7973) for us to work on._
 
 _This series (and more series in the future) will constantly attempt to surface the [tacit knowledge](https://commoncog.com/blog/tacit-knowledge-is-a-real-thing/) that experienced developers use to do their work._
-
-{% include jekyll-bug-fix-index.md %}
 
 
 -----------------------

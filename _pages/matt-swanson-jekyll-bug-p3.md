@@ -1,13 +1,11 @@
 ---
-layout: page
+layout: jekyll-bug-fix-series
 title: "Making an OSS Contribution, Part 3: ..."
 published: false
 description: ""
 permalink: /matt-swanson-jekyll-bug-p3
 image: ""
 ---
-
-{% include jekyll-bug-fix-index.md %}
 
 
 
