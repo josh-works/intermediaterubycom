@@ -8,6 +8,11 @@ image: ""
 series_part: "Part 3"
 ---
 
+## How to read this particular post
+
+
+## Video Timestamps
+
 
 _video coming soon_
 
@@ -127,7 +132,9 @@ That string that we've eliminated, `._~!$&'()+,;=@`, is a pretty common list of 
 So, Matt isn't worrying about this part of the regular expression as it's not related to the bug we're trying to fix. 
 
 
--------------------------------
+## Checks for Understanding
+
+----------------------------
 
 Next, jump over to part 4:
 

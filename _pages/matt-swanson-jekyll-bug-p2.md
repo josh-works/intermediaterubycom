@@ -17,19 +17,7 @@ _This series (and more series in the future) will constantly attempt to surface 
 
 -----------------------
 
-_video coming soon_
-
-Drop your email address here to get notified when it's ready:
-
-<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
-
-
-## Timestamps
-
-- 0:38, Setup to start working on the jekyll repository
-- forked and cloned the repo
-
-## Follow along with us
+## How to read this particular post
 
 Remember, the goal of this entire series is for you to do the exact same things an expert does. So, clone down the repository.
 
@@ -47,9 +35,23 @@ $ git checkout 8403184b
 Open up the [Contribution Guidelines](https://jekyllrb.com/docs/contributing/) and work through the video with us! The Jekyll docs talk about the various scripts we used [here](https://jekyllrb.com/docs/contributing/#running-tests-locally)
 
 
-## Running tests per the docs
+_video coming soon_
 
-The Jekyll project specifies running a certain script (`script/boostrap`) to kick off all the tests.
+Drop your email address here to get notified when it's ready:
+
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
+
+
+## Video Timestamps
+
+_coming soon_
+
+
+
+
+## Running scripts per the contribution guidelines
+
+The Jekyll [Contribution Guidelines](https://jekyllrb.com/docs/contributing/) specifies running a certain script (`script/boostrap`) to kick off all the tests.
 
 This means there's a directory of scripts (appropriately lableled `script`, which presumably has many scripts, but we care about only one of them. `boostrap`)
 
@@ -74,12 +76,16 @@ Shipping a library for your day job is different than working on an application.
 
 Matt says "the top two shortcuts..."
 
-### Tacit knowledge
+## Highlighting Tacit Knowledge
+
+As I've mentioned, one of the goals of this project is to find instances where the expert uses Tacit Knowledge. I'll use this section to bring attention to as much of Matt's tacit knowledge as possible.
+
+### Top keyboard shortcut for Atom/VS Code
 
 - fuzzy finder ([Atom](https://github.com/atom/fuzzy-finder/), [VS Code](https://github.com/gayanhewa/vscode-fuzzysearch))
 - run test file for current file (Josh needs to find this, requires a plugin)
 
-#### copy-find-paste-enter keyboard shortcuts
+### copy-find-paste-enter keyboard shortcuts
 
 keyboard shortcuts! Matt uses this one all the time, and if you're not using this keyboard shortcut, might be time to start.
 
@@ -98,7 +104,7 @@ Please add this general process to your own workflow, if it's not already there.
 
 Note - When you're staying inside the editor, at least for Atom, I can double-click any text, and when I hit `⌘+f` Atom inserts the selected string in the search box. This saves me a copy/paste. 
 
-#### Jargon: I18N (internationalization)
+### Jargon: I18N (internationalization)
 
 `i18n`, `a16z`, `a11y` are all phrases you might have come accros in the industry. 
 
@@ -112,16 +118,6 @@ Note - When you're staying inside the editor, at least for Atom, I can double-cl
 Runs rubocop, the unit tests. 
 
 The Jekyll team has confidence in the build setup, so we run the tests to make sure we're starting in a clean state.
-
-### How Matt decided which file to add the failing test to
-
-Searching for `slugify` vs. `.slugify`
-
-Ah, the file name convention is different from what I expected.
-
-I expected `{class_under_test}_test.rb`, but it's actually `test_{class_under_test}.rb`
-
-Try this yourself, in your editor of choice. Do you see the difference in results?
 
 ### Splitting panes horizontally vs. vertically
 
@@ -144,7 +140,18 @@ If instead we split the screens horizontally, here's what we'd get:
 
 Matt splits the panes horizontally, since he's running his fonts unsually learge, just so they come through better in the recording.
 
-### Keybindings
+## How Matt decided which file to add the failing test to
+
+Searching for `slugify` vs. `.slugify`
+
+Ah, the file name convention is different from what I expected.
+
+I expected `{class_under_test}_test.rb`, but it's actually `test_{class_under_test}.rb`
+
+Try this yourself, in your editor of choice. Do you see the difference in results?
+
+
+## Keybindings
 
 Matt has keyboard shortcuts set up for his commonly used applications.
 
@@ -156,7 +163,7 @@ I'm all for copying what experts do, might be worth setting something similar up
 
 I've written extensively about exactly how I have my "environment" set up [here](https://josh.works/developer-workflow)
 
-### Writing the first test
+## Writing the first test
 
 At about an hour in, we've written three lines of code:
 

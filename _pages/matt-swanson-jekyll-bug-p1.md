@@ -31,7 +31,7 @@ This first video covers _just_ how Matt found this issue to work on. The constra
 
 <iframe width="560" height="315" class="youtube-video-embed" src="https://www.youtube.com/embed/_-m0MhmZfZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Timestamps for video
+## Video Timestamps
 
 - [0:00](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=0m00s) People misrepresent how easy it is to work on open source software
 - [0:22](https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=0m22s) Why it's overwhelming to jump into a project like Jekyll and just look for an issue to help with
