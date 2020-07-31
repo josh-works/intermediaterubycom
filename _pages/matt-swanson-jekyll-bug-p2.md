@@ -108,9 +108,9 @@ Note - When you're staying inside the editor, at least for Atom, I can double-cl
 
 `i18n`, `a16z`, `a11y` are all phrases you might have come accros in the industry. 
 
-`i18n`=> `internationalization` (there are 18 letters between the `i` and the `n`)
-`a16z`=> `AndreessenHorowitz` (there are 16 letters between the `a` and the `z`)
-`a11y`=> `accessibility` (there are 11 letters between the `a` and the `y`)
+- `i18n`=> `internationalization` (there are 18 letters between the `i` and the `n`)
+- `a16z`=> `AndreessenHorowitz` (there are 16 letters between the `a` and the `z`)
+- `a11y`=> `accessibility` (there are 11 letters between the `a` and the `y`)
 
 
 ### Running another script (`cibuild`)
@@ -138,7 +138,7 @@ If instead we split the screens horizontally, here's what we'd get:
 
 ![horizontal split](/images/matt-swanson-jekyll/horizontal_screen_setup.jpg)
 
-Matt splits the panes horizontally, since he's running his fonts unsually learge, just so they come through better in the recording.
+Matt splits the panes horizontally, since he's running his fonts unsually large so they come through better in the recording.
 
 ## How Matt decided which file to add the failing test to
 
@@ -195,7 +195,7 @@ end
 
 
 -----------------------
-Next, jump over to part 3:
+Next, jump over to part 3.
 
 But before you go, why not subscribe to get updates when more guides in this series are done, as well as when future guides go up?
 

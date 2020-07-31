@@ -18,6 +18,8 @@ series_part: "Part 4"
 
 _video coming soon_
 
+
+Drop your email address here to get notified when it's ready:
 Drop your email address here to get notified when it's ready:
 
 <script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
