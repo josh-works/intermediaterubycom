@@ -16,7 +16,7 @@ My approach at Intermediate Ruby is informed by a few different resources:
 
 [Anti-Racist Pedagogy in a Graduate Computer Science Class](https://chelseatroy.com/2020/06/24/anti-racist-pedagogy-in-a-graduate-computer-science-class/)
 
-## Cedric James' `Tacit Knowledge` Series
+## Cedric Chin's `Tacit Knowledge` Series
 
 [Tacit Knowledge Series](https://commoncog.com/blog/the-tacit-knowledge-series/)
 

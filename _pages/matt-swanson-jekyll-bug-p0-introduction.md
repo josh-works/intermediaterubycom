@@ -41,7 +41,7 @@ I'm editing it down, optimizing for moving quickly through what we did, to show 
 
 ## What is Tacit Knowledge
 
-Cedric James wrote something recently that gave me language for a phenomina I'd felt for years but never figured out how to say directly. 
+Cedric Chin wrote something recently that gave me language for a phenomina I'd felt for years but never figured out how to say directly. 
 
 Quoting from his piece [Why Tacit Knowledge is More Important Than Deliberate Practice](https://commoncog.com/blog/tacit-knowledge-is-a-real-thing/)
 
@@ -119,7 +119,7 @@ You would be well justified in expressing some skepticism here.
 
 All of those resources are effective! I'm glad they exist, and I will continue to make use of them for my own learning.
 
-Cedric James linked to [Why books don’t work](https://andymatuschak.org/books/), and I'd recommend you click through and give it a read. Books, lectures, and textbooks all have a role to play, but are substantially less effective at transferring knowledge than nearly everyone recognizes.
+Cedric Chin linked to [Why books don’t work](https://andymatuschak.org/books/), and I'd recommend you click through and give it a read. Books, lectures, and textbooks all have a role to play, but are substantially less effective at transferring knowledge than nearly everyone recognizes.
 
 But all of these resources have the same problem. They are resources _about work_, but they are not resources of _doing the work_. 
 
