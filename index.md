@@ -23,7 +23,7 @@ I'm not interested in learning _just_ for the sake of learning.
 
 This "power" can be converted to more pay, or more interesting projects, or promotions, more impact, different and better jobs, more time off, less hours, etc. 
 
-We get more of all the stuff in life that we as humans like to do, related to software development or unrelated so software development, as we get learn more.<sup>1</sup>
+As we get better at software development, we get more of the stuff that we as humans like.<sup>1</sup>
 
 Ironically, by being a _better software developer_ I can spend _less time_ writing code, and be better paid for it. 
 
@@ -32,4 +32,4 @@ That's what this project is all about.
 <script async data-uid="5b13b420e3" src="https://josh-thompson.ck.page/5b13b420e3/index.js"></script>
 
 
-**1** _There's the problem in the industry that even "senior developers" who "know everything and can do anything" still deal with challenging management practices and have constrained work environments. They can snap their fingers and have a new job. Someone with six months of experience under their belt will have a harder time job hunting._
+**1** _Within reason, of course. There's the problem in the industry that even "senior developers" who "know everything and can do anything" still deal with challenging management practices and have constrained work environments. They can snap their fingers and have a new job. Someone with six months of experience under their belt will have a harder time job hunting._
