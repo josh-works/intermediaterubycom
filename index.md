@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-## Learn Intermediate Ruby, make more :moneybag: :moneybag: :moneybag: 
+## Learn Intermediate Ruby, make more 💰💰💰
 
 We all got into software development for different reasons. I suspect, though, that there are commonalities among us:
 
