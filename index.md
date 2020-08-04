@@ -32,4 +32,4 @@ That's what this project is all about.
 <script async data-uid="5b13b420e3" src="https://josh-thompson.ck.page/5b13b420e3/index.js"></script>
 
 
-**1** _Of course, there's a well-known problem in the industry that even "senior developers" who know everything and can do anything (from my point of view) still deal with crappy management practices and have highly constrained work environments... but they can snap their fingers and have a new job. Someone with six months of experience under their belt will have a harder time job hunting._
+**1** _There's the problem in the industry that even "senior developers" who "know everything and can do anything" still deal with challenging management practices and have constrained work environments. They can snap their fingers and have a new job. Someone with six months of experience under their belt will have a harder time job hunting._
