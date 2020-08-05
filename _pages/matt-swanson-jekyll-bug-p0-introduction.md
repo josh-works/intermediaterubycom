@@ -4,7 +4,7 @@ title: "Make an OSS Contribution, Part 0: Introduction"
 published: true
 description: "'When you ask someone how to get better at software development, they might tell you to make open source contributions.' That advice is hard to follow if you don't know how to do this, or how long it will take, or even what you'll get out of it. Here's the series introduction to a curated, annotated, edited pairing session where Matt and I worked on a bug in the Jekyll codebase. "
 permalink: /make-oss-contributions-part-0-introduction
-image: "/images/matt-swanson-jekyll/varieties-of-work.jpg"
+image: "images/matt-swanson-jekyll/varieties-of-work.jpg"
 series_part: "Part 0"
 ---
 
