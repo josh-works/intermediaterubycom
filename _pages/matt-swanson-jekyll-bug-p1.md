@@ -4,7 +4,7 @@ title: "Make an OSS Contribution, Part 1: Pairing with Matt Swanson on Jekyll"
 published: true
 description: "When you ask someone how to get better at software development, they might tell you to make open source contributions. That advice is hard to follow if you don't know how to do this, or how long it will take, or even what you'll get out of it. This is part 1 of a series where Matt Swanson and I work together on fixing a small bug in an open-source repo. This series isn't about us, though, it's about you, and helping you learn as much as I did from pairing with a senior software developer!"
 permalink: /make-oss-contributions-part-1-finding-an-issue
-image: ""
+image: "/images/matt-swanson-jekyll/2020-08-05utils constants.jpg"
 series_part: "Part 1"
 ---
 
