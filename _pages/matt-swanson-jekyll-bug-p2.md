@@ -41,30 +41,22 @@ Open up the [Contribution Guidelines](https://jekyllrb.com/docs/contributing/) a
 
 ## Video Timestamps
 
-
 - [0:00](https://youtu.be/sqMh7sM541M?t=0m00s) Talking about what setup Matt has done (almost none!)
 - [0:40](https://youtu.be/sqMh7sM541M?t=0m40s) Jekyll contribution docs: https://jekyllrb.com/docs/contributing/
-- [0:48](https://youtu.be/sqMh7sM541M?t=0m48s) Looking for CONTRIBUTING.markdown in project
-- [1:15](https://youtu.be/sqMh7sM541M?t=1m15s) Running tests locally, running scripts (we start with script/bootstrap)
+- [0:48](https://youtu.be/sqMh7sM541M?t=0m48s) Looking for `CONTRIBUTING.markdown` in project
+- [1:15](https://youtu.be/sqMh7sM541M?t=1m15s) Running tests locally, running scripts (we start with `script/bootstrap`)
 - [1:35](https://youtu.be/sqMh7sM541M?t=1m35s) exploring script directory, running recommended scripts
 - [2:00](https://youtu.be/sqMh7sM541M?t=2m00s) how to execute scripts in the shell
 - [2:45](https://youtu.be/sqMh7sM541M?t=2m45s) Looking at GH Issue for clue of what file to start with
-- [3:05](https://youtu.be/sqMh7sM541M?t=3m05s) #1 keyboard shortcut to know: Fuzzy-finder/go-to-file
+- [3:05](https://youtu.be/sqMh7sM541M?t=3m05s) \#1 keyboard shortcut to know: `Fuzzy-finder/go-to-file`
 - [3:30](https://youtu.be/sqMh7sM541M?t=3m30s) "run tests for current file" - I've never used this extension, but I've also never used .NET or Java.
 - [4:40](https://youtu.be/sqMh7sM541M?t=4m40s) installing all the gems takes FOREVER
 - [4:53](https://youtu.be/sqMh7sM541M?t=4m53s) Matt does some amazing keyboard work to do something specific, quickly.
 - [5:32](https://youtu.be/sqMh7sM541M?t=5m32s) reading the method in question, starting to figure out what it does, what jumps out at Matt
-- [6:36](https://youtu.be/sqMh7sM541M?t=6m36s) quick select-find-jump usage to jump around file
+- [6:36](https://youtu.be/sqMh7sM541M?t=6m36s) quick `select-find-jump` usage to jump around file
 - [8:15](https://youtu.be/sqMh7sM541M?t=8m15s) the bootstrap script is finished, finally!
-- [9:00](https://youtu.be/sqMh7sM541M?t=9m00s) still exploring relationship between Utils#slugify and Utils#replace_character_sequence_with_hyphen
+- [9:00](https://youtu.be/sqMh7sM541M?t=9m00s) still exploring relationship between `Utils#slugify` and `Utils#replace_character_sequence_with_hyphen`
 - [10:00](https://youtu.be/sqMh7sM541M?t=10m00s) "we're getting warmer" with finding what to pay attention to, what to ignore
-
-0m00s
-
-
-https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=0m22s
-
-
 
 
 ## Running scripts per the contribution guidelines
