@@ -34,17 +34,35 @@ $ git checkout 8403184b
 
 Open up the [Contribution Guidelines](https://jekyllrb.com/docs/contributing/) and work through the video with us! The Jekyll docs talk about the various scripts we used [here](https://jekyllrb.com/docs/contributing/#running-tests-locally)
 
+## Video Walkthrough
 
-_video coming soon_
-
-Drop your email address here to get notified when it's ready:
-
-<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
+<iframe width="560" height="315" class="youtube-video-embed" src="https://www.youtube.com/embed/sqMh7sM541M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Video Timestamps
 
-_coming soon_
+
+- [0:00](https://youtu.be/sqMh7sM541M?t=0m00s) Talking about what setup Matt has done (almost none!)
+- [0:40](https://youtu.be/sqMh7sM541M?t=0m40s) Jekyll contribution docs: https://jekyllrb.com/docs/contributing/
+- [0:48](https://youtu.be/sqMh7sM541M?t=0m48s) Looking for CONTRIBUTING.markdown in project
+- [1:15](https://youtu.be/sqMh7sM541M?t=1m15s) Running tests locally, running scripts (we start with script/bootstrap)
+- [1:35](https://youtu.be/sqMh7sM541M?t=1m35s) exploring script directory, running recommended scripts
+- [2:00](https://youtu.be/sqMh7sM541M?t=2m00s) how to execute scripts in the shell
+- [2:45](https://youtu.be/sqMh7sM541M?t=2m45s) Looking at GH Issue for clue of what file to start with
+- [3:05](https://youtu.be/sqMh7sM541M?t=3m05s) #1 keyboard shortcut to know: Fuzzy-finder/go-to-file
+- [3:30](https://youtu.be/sqMh7sM541M?t=3m30s) "run tests for current file" - I've never used this extension, but I've also never used .NET or Java.
+- [4:40](https://youtu.be/sqMh7sM541M?t=4m40s) installing all the gems takes FOREVER
+- [4:53](https://youtu.be/sqMh7sM541M?t=4m53s) Matt does some amazing keyboard work to do something specific, quickly.
+- [5:32](https://youtu.be/sqMh7sM541M?t=5m32s) reading the method in question, starting to figure out what it does, what jumps out at Matt
+- [6:36](https://youtu.be/sqMh7sM541M?t=6m36s) quick select-find-jump usage to jump around file
+- [8:15](https://youtu.be/sqMh7sM541M?t=8m15s) the bootstrap script is finished, finally!
+- [9:00](https://youtu.be/sqMh7sM541M?t=9m00s) still exploring relationship between Utils#slugify and Utils#replace_character_sequence_with_hyphen
+- [10:00](https://youtu.be/sqMh7sM541M?t=10m00s) "we're getting warmer" with finding what to pay attention to, what to ignore
+
+0m00s
+
+
+https://www.youtube.com/watch?v=_-m0MhmZfZk&feature=youtu.be&t=0m22s
 
 
 
@@ -73,17 +91,21 @@ While it installs, Matt and I talk about a next iteration of this project that m
 
 Shipping a library for your day job is different than working on an application.
 
-
-Matt says "the top two shortcuts..."
-
-## Highlighting Tacit Knowledge
-
 As I've mentioned, one of the goals of this project is to find instances where the expert uses Tacit Knowledge. I'll use this section to bring attention to as much of Matt's tacit knowledge as possible.
+
+
 
 ### Top keyboard shortcut for Atom/VS Code
 
-- fuzzy finder ([Atom](https://github.com/atom/fuzzy-finder/), [VS Code](https://github.com/gayanhewa/vscode-fuzzysearch))
-- run test file for current file (Josh needs to find this, requires a plugin)
+Matt says "the top two shortcuts..."
+1. fuzzy finder ([Atom](https://github.com/atom/fuzzy-finder/), [VS Code](https://github.com/gayanhewa/vscode-fuzzysearch))
+2. run test file for current file (Josh needs to find this, requires a plugin)
+
+For "run tests for current file" I usually want to look at the test file before running it, so my workflow is:
+
+1. use fuzzy finder to open up the desired test file
+2. Use keyboard shortcut to copy the _relative_ path of the test file to my clipboard. Atom: `shift+ctrl+c`
+3. Run the test file in whatever method the project requires: `ruby <file>`, `bundle exec ruby -Itest <file>`, `./test <file>`, etc. 
 
 ### copy-find-paste-enter keyboard shortcuts
 
