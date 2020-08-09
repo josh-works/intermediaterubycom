@@ -57,6 +57,28 @@ Open up the [Contribution Guidelines](https://jekyllrb.com/docs/contributing/) a
 - [8:15](https://youtu.be/sqMh7sM541M?t=8m15s) the bootstrap script is finished, finally!
 - [9:00](https://youtu.be/sqMh7sM541M?t=9m00s) still exploring relationship between `Utils#slugify` and `Utils#replace_character_sequence_with_hyphen`
 - [10:00](https://youtu.be/sqMh7sM541M?t=10m00s) "we're getting warmer" with finding what to pay attention to, what to ignore
+- [11:20](https://youtu.be/sqMh7sM541M?t=11m20s) explaining what I18n means, and a16z, not mentioned but commonly seen: a11y => "accessibility"
+- [12:40](https://youtu.be/sqMh7sM541M?t=12m40s) Matt supposing that #slugify probably changes a lot. It's "a hotspot". 
+- [13:40](https://youtu.be/sqMh7sM541M?t=13m40s) Matt searches for slugify, then .slugify. 
+- [15:38](https://youtu.be/sqMh7sM541M?t=15m38s) Running ./script/cibuild, 2nd script recommended in contribution guidelines. (because the first script *finally* finished)
+- [16:30](https://youtu.be/sqMh7sM541M?t=16m30s) Matt explains how he found the file to add the test too
+- [18:29](https://youtu.be/sqMh7sM541M?t=18m29s) splitting tabs, test on one side, lib on the other. (SEE NOTES FOR FURTHER THOUGHTS ON SPLITTING PANES)
+- [19:40](https://youtu.be/sqMh7sM541M?t=19m40s) Matt mentions that this repo is in his /junk folder  😂
+- [20:10](https://youtu.be/sqMh7sM541M?t=20m10s) Checking out a new branch! 🙌
+- [20:23](https://youtu.be/sqMh7sM541M?t=20m23s) Odd issue where git was picking up test artifacts. Must have been a temporary file. 
+- [21:27](https://youtu.be/sqMh7sM541M?t=21m27s) Figuring out how to run an individual test file
+- [21:57](https://youtu.be/sqMh7sM541M?t=21m57s) What test framework ARE we using? Looking at script/test
+- [22:53](https://youtu.be/sqMh7sM541M?t=22m53s) Running just the test_utils.rb file.
+- [23:40](https://youtu.be/sqMh7sM541M?t=23m40s) Talking about test output, how overwhelming this all is!
+- [24:04](https://youtu.be/sqMh7sM541M?t=24m04s) What is the "options --seed" thing?
+- [25:51](https://youtu.be/sqMh7sM541M?t=25m51s) Expounding on test coverage, timing, understanding the "time" output (real vs. user vs. system)
+- [26:50](https://youtu.be/sqMh7sM541M?t=26m50s) "the only thing that is of minor use to use... is the test coverage percentage"
+- [28:55](https://youtu.be/sqMh7sM541M?t=28m55s) Figuring out WHERE to put our new test.
+- [30:16](https://youtu.be/sqMh7sM541M?t=30m16s) Narrowing down to the "#slugify" context block
+- [31:10](https://youtu.be/sqMh7sM541M?t=31m10s) Starting to actually add lines of code. 👩‍💻
+- [31:33](https://youtu.be/sqMh7sM541M?t=31m33s) copying from the test below to get our basic test
+- [31:48](https://youtu.be/sqMh7sM541M?t=31m48s) copying expected/actual values from @deepestblue's issue (thanks again, @deepestblue, for such a good bug report)
+- [32:44](https://youtu.be/sqMh7sM541M?t=32m44s) running the file again, this time expecting a failure. And getting it! 🎉🎊🎉🎊
 
 
 ## Running scripts per the contribution guidelines
