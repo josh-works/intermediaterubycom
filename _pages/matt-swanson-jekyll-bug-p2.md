@@ -80,8 +80,10 @@ Open up the [Contribution Guidelines](https://jekyllrb.com/docs/contributing/) a
 - [31:48](https://youtu.be/sqMh7sM541M?t=31m48s) copying expected/actual values from @deepestblue's issue (thanks again, @deepestblue, for such a good bug report)
 - [32:44](https://youtu.be/sqMh7sM541M?t=32m44s) running the file again, this time expecting a failure. And getting it! 🎉🎊🎉🎊
 
+## Expanding on things that came up in the video:
 
-## Running scripts per the contribution guidelines
+
+### Running scripts per the contribution guidelines
 
 The Jekyll [Contribution Guidelines](https://jekyllrb.com/docs/contributing/) specifies running a certain script (`script/boostrap`) to kick off all the tests.
 
@@ -107,8 +109,6 @@ Shipping a library for your day job is different than working on an application.
 
 As I've mentioned, one of the goals of this project is to find instances where the expert uses Tacit Knowledge. I'll use this section to bring attention to as much of Matt's tacit knowledge as possible.
 
-
-
 ### Top keyboard shortcut for Atom/VS Code
 
 Matt says "the top two shortcuts..."
@@ -121,7 +121,7 @@ For "run tests for current file" I usually want to look at the test file before 
 2. Use keyboard shortcut to copy the _relative_ path of the test file to my clipboard. Atom: `shift+ctrl+c`
 3. Run the test file in whatever method the project requires: `ruby <file>`, `bundle exec ruby -Itest <file>`, `./test <file>`, etc. 
 
-### copy-find-paste-enter keyboard shortcuts
+### `copy-find-paste-enter` keyboard shortcuts
 
 keyboard shortcuts! Matt uses this one all the time, and if you're not using this keyboard shortcut, might be time to start.
 
@@ -176,7 +176,7 @@ If instead we split the screens horizontally, here's what we'd get:
 
 Matt splits the panes horizontally, since he's running his fonts unsually large so they come through better in the recording.
 
-## How Matt decided which file to add the failing test to
+### How Matt decided which file to add the failing test to
 
 Searching for `slugify` vs. `.slugify`
 
@@ -187,7 +187,7 @@ I expected `{class_under_test}_test.rb`, but it's actually `test_{class_under_te
 Try this yourself, in your editor of choice. Do you see the difference in results?
 
 
-## Keybindings
+### Keybindings
 
 Matt has keyboard shortcuts set up for his commonly used applications.
 
@@ -199,7 +199,7 @@ I'm all for copying what experts do, might be worth setting something similar up
 
 I've written extensively about exactly how I have my "environment" set up [here](https://josh.works/developer-workflow)
 
-## Writing the first test
+### Writing the first test
 
 At about an hour in, we've written three lines of code:
 
@@ -212,23 +212,21 @@ end
 
 
 
-
 ## Checks for Understanding
 
 1. When prepping to do open-source work, should you fork the repo before cloning it?
-1. What script should we run that, according to the jekyll docs, makes sure the product is set up and running correctly?
+1. What script should we run that, according to the [Jekyll docs](https://jekyllrb.com/docs/contributing/), makes sure the project is set up and running correctly?
 1. How do you run a script? What directory would we expect scripts to be in? 
-1. Why would you run a script?
+1. _Why_ would you run a script?
 1. What 2 things does `./script/bootstrap` do?
 1. What's the keyboard shortcut for opening `go-to-file`/`fuzzy-finder` for your editor? 
-1. What script would we use to make sure the repo is in good shape to work with? Hint - `CircleCI` runs against every new PR. What does this script do?
+1. What script would we use to make sure the repo is in good shape to work with? Hint: `CircleCI` runs against every new PR. What does this script do?
 1. What script do you use to run tests?
-1. How would you find every spot that `slugify` is mentioned? How about every time the method is used?
+1. How would you find every spot that `slugify` is mentioned? How about every time the method is called?
 1. What does the `test_utils` script do?
 1. What are the implications of Jekyll's test coverage? (It's 64%). 
 1. How would we run tests for _just_ the `lib/jekyll/utils.rb` file?
 1. When you add the first test, what should the `assert_equals` arguments be? (Hint: they come from the Jekyll issue report)
-
 
 -----------------------
 Next, jump over to part 3.
