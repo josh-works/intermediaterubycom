@@ -23,7 +23,7 @@ I'm not interested in learning _just_ for the sake of learning.
 
 This "power" can be converted to more pay, or more interesting projects, or promotions, more impact, different and better jobs, more time off, less hours, etc. 
 
-If access to more power is interesting to you, you're in the right place, because in general, we can convert "power" to "other things we want", similar to how money can be converted to other desirable things. [^what-we-like]
+If access to more power is interesting to you, you're in the right place, because in general, we can convert "power" to "other things we want", similar to how money can be converted to other desirable things.[^what-we-like]
 
 Ironically, by being a _better software developer_ I can spend _less time_ writing code, and be better paid for it. 
 
