@@ -19,18 +19,25 @@ _This series (and more series in the future) will constantly attempt to surface 
 
 ## How to read this particular post
 
-Remember, the goal of this entire series is for you to do the exact same things an expert does. So, clone down the repository.
+Remember, the goal of this entire series is for you to do the exact same things an expert does. 
 
-Now, this series will be useful for years to come, but the PR Matt and I made has been merged into the repository, so you'll have to check out the repo at the same state it was in when he and I started working on it.
+
+## How to follow along with us
+
+To follow along, in your local environment, you'll need to clone down the repo, and check out a commit from _before_ our fix gets merged. 
+
 
 Since you're not necessarily making your own PR, you don't have to fork it to your own repo, you can just clone it. Here's how to set it up:
 
 ```shell
+// get the repo
 $ git clone git@github.com:jekyll/jekyll.git
 
-// now checkout the codebase where Matt and I were working:
+// now check out from the same commit Matt and I were working with:
 $ git checkout 8403184b 
 ```
+
+Now you've got the codebase in the same place we had it in!
 
 Open up the [Contribution Guidelines](https://jekyllrb.com/docs/contributing/) and work through the video with us! The Jekyll docs talk about the various scripts we used [here](https://jekyllrb.com/docs/contributing/#running-tests-locally)
 
