@@ -17,7 +17,54 @@ series_part: "Part 3"
 
 ## Video Timestamps
 
-_coming soon_
+- [0:15](https://youtu.be/0ffyhDQB_XI?t=0m15s) Conventions for writing Context blocks, generating useful error messages
+- [1:00](https://youtu.be/0ffyhDQB_XI?t=1m00s) our test failure matches the bug report. 💪
+- [1:30](https://youtu.be/0ffyhDQB_XI?t=1m30s) running a single test from the test file. Trying line number first
+- [1:45](https://youtu.be/0ffyhDQB_XI?t=1m45s) How to pass the name of the test through, in a regular expression: -n=/tamil/
+- [3:00](https://youtu.be/0ffyhDQB_XI?t=3m00s) Applying the fix "as suggested", hoping it'll be easy. (sad trombone)
+- [4:15](https://youtu.be/0ffyhDQB_XI?t=4m15s) Making the first change, running test, hoping for different output
+- [4:40](https://youtu.be/0ffyhDQB_XI?t=4m40s) Figuring out if what we're thinking is getting called IS getting called
+- [5:10](https://youtu.be/0ffyhDQB_XI?t=5m10s) Oops, wrong mode. Updating the Regular Expression. Easy fix. 
+- [5:48](https://youtu.be/0ffyhDQB_XI?t=5m48s) Now applying the given Regex to SLUGIFY_DEFAULT_REGEX
+- [6:24](https://youtu.be/0ffyhDQB_XI?t=6m24s) We made a change and got a change! Huzzah! 
+- [6:50](https://youtu.be/0ffyhDQB_XI?t=6m50s) Oh boy. It didn't work. Lets debug. Lots of things to check. JUMP TO 33:45 TO SEE ANSWER IF YOU DON'T WANT TO WATCH US DEBUG THIS
+- [8:28](https://youtu.be/0ffyhDQB_XI?t=8m28s) "Slimming down" the magnitude of our change, seeing if that helps.
+- [8:55](https://youtu.be/0ffyhDQB_XI?t=8m55s) Adding non-special-characters to see if they show up in the test output. they don't. :( 
+- [9:53](https://youtu.be/0ffyhDQB_XI?t=9m53s) Adding a breakpoint so we can shorten the feedback loop. Pry for the win! 
+- [10:16](https://youtu.be/0ffyhDQB_XI?t=10m16s) Oops. Pry doesn't work. 
+- [10:35](https://youtu.be/0ffyhDQB_XI?t=10m35s) Installing pry globally with -g flag. Still doesn't work. 
+- [11:15](https://youtu.be/0ffyhDQB_XI?t=11m15s) Pry still not working. 
+- [11:57](https://youtu.be/0ffyhDQB_XI?t=11m57s) Incomprehensible error messages. Story of my life.
+- [12:20](https://youtu.be/0ffyhDQB_XI?t=12m20s) Looking up a Pry alternative, like IRB
+- [12:35](https://youtu.be/0ffyhDQB_XI?t=12m35s) using 'debugger' statement
+- [13:10](https://youtu.be/0ffyhDQB_XI?t=13m10s) Using require 'irb'; binding.irb. it works!🎉 
+- [14:00](https://youtu.be/0ffyhDQB_XI?t=14m00s) Exploring "state" of what's available in this #replace_character_sequence_with_hyphen
+- [15:00](https://youtu.be/0ffyhDQB_XI?t=15m00s) Playing with return values of `string.gsub(replaceable_char, "-")`
+- [15:20](https://youtu.be/0ffyhDQB_XI?t=15m20s) Introducing Rubular, a great tool for working with Regular Expressions
+- [16:05](https://youtu.be/0ffyhDQB_XI?t=16m05s) Building up the regular expression and test string in Rubular
+- [18:20](https://youtu.be/0ffyhDQB_XI?t=18m20s) Trying the suggested Regular Expression in Rubular to see if it works
+- [18:44](https://youtu.be/0ffyhDQB_XI?t=18m44s) it works! 
+- [19:21](https://youtu.be/0ffyhDQB_XI?t=19m21s) Trying the working Regular Expression in IRB
+- [20:35](https://youtu.be/0ffyhDQB_XI?t=20m35s) Still stumped. Even more stumped than before. This is not what we expected.
+- [22:45](https://youtu.be/0ffyhDQB_XI?t=22m45s) Still stumped. We're wondering what we're missing. Cannot find it. 
+- [24:32](https://youtu.be/0ffyhDQB_XI?t=24m32s) Comparing strings. 💡
+- [24:40](https://youtu.be/0ffyhDQB_XI?t=24m40s) Pasting the regular expression straight into IRB
+- [25:30](https://youtu.be/0ffyhDQB_XI?t=25m30s) Looking at the construction of the regular expression
+- [26:33](https://youtu.be/0ffyhDQB_XI?t=26m33s) Trying to look in the docs for a hint of why Regexp.new(regex) might behave differently from /regex/
+- [27:13](https://youtu.be/0ffyhDQB_XI?t=27m13s) Regular Expression Character Properties. Check the notes for more details.
+- [28:44](https://youtu.be/0ffyhDQB_XI?t=28m44s) barking up the wrong tree. 
+- [29:00](https://youtu.be/0ffyhDQB_XI?t=29m00s) Finding better words to google thanks to a JavaScript question
+- [29:30](https://youtu.be/0ffyhDQB_XI?t=29m30s) advanced GoogleFu: how to exclude certain answers
+- [30:20](https://youtu.be/0ffyhDQB_XI?t=30m20s) Noticing the escape characters. Getting warmer...\
+- [32:20](https://youtu.be/0ffyhDQB_XI?t=32m20s) "OR-ed together." What strange words. 
+- [33:50](https://youtu.be/0ffyhDQB_XI?t=33m50s) Matt sees the problem! We have to double-escape certain characters. 🤦🏻‍♂️ So simple.
+- [34:40](https://youtu.be/0ffyhDQB_XI?t=34m40s) Seeing the correct regular expression, with `\p{}` visible
+- [35:00](https://youtu.be/0ffyhDQB_XI?t=35m00s) The test passes. 🙃. What a 🐇 hole!
+- [35:45](https://youtu.be/0ffyhDQB_XI?t=35m45s) Meta-principle: If evaluated Regular Expression isn't doing what you expect, make sure the regex being run is the same as what you think you're giving it. 
+- [36:38](https://youtu.be/0ffyhDQB_XI?t=36m38s) Running all the tests. Still pass. 🏁 🎉🎊🎉🎊🎉🎊🎉🎊
+
+
+
 
 
 ### Test Naming Conventions
@@ -112,7 +159,42 @@ From: /Users/joshthompson/crap/jekyll/lib/jekyll/utils.rb @ line 364 :
 => "default"
 ```
 
-### Regular Expressions
+### Breaking the Regex into smaller pieces
+
+These are sorta crazy regular expressions to try to read:
++There's a lot to say about Regular Expressions, but in this case, we don't have to worry _too_ much about the exact details of the Regex we were working with.
+
+```ruby
+/[^\p{M}\p{L}\p{Nd}._~!$&'()+,;=@]+/
+/[^[:alnum:]._~!$&'()+,;=@]+/
+/[^\\p{M}\\p{L}\\p{Nd}._~!$&'()+,;=@]+/
+```
+
+The characters in common are:
+
+```
+._~!$&'()+,;=@
+```
+
+If you put `[._~!$&'()+,;=@]` into Rubular, and give it the following test strings, you'll see what it does:
+
+```
+this-matches_any;chars
+_one!might~not%want.
+=@in'a$url
+_~!$&'()+,=@+
+```
+
+The `+` means `one or more of`, so these big regular expressions are trying to a variety of character properties, with the potential matches enclosed inside the outter brackets.
+
+Here's how I "read" the regex:
+
+```
+[anything_in_here_including._~!$&'()+,;=@]+
+```
+
+
+### Regular Expressions (character properties)
 
 There's a lot to say about Regular Expressions, but in this case, we don't have to worry _too_ much about the exact details of the Regex we were working with.
 
