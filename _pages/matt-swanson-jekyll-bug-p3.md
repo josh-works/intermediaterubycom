@@ -12,7 +12,7 @@ series_part: "Part 3"
 
 Make sure to read part 0, and watch part 1 and 2. It won't make much sense otherwise.
 
-We've started with a failing test. I encourage you to follow the [setup instructions] from Part 2.
+We've started with a failing test. I encourage you to follow the [setup instructions](https://intermediateruby.com/matt-swanson-jekyll-bug-p2#how-to-follow-along-with-us) from Part 2.
 
 Make sure to add the same test we did, [which is visible here](https://intermediateruby.com/matt-swanson-jekyll-bug-p2#writing-the-first-test)
 
