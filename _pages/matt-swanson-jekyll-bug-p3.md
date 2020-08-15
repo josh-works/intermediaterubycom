@@ -271,10 +271,15 @@ Hopefully now you will too!
 
 - What are two reasons you might want to run just a _specific_ test from a file?
 - Googling: How do you run a query and exclude results containing a certain word? (for example, googling on Regular Expressions, and you don't want any answers that reference `javascript`)
-- If you see `p{}` in a regular expression, what does it mean? (Check the docs, no need to know this off the top of your head)
+- If you see `\p{something}` in a regular expression, what does it mean? (Check the docs, no need to know this off the top of your head)
 - If I want my regular expression to be `/\p{L}/`, what should it _really_ be? 
+- What's an `alnum`?
+- How many characters in a string will this regular expression capture? `/[abc]/`
+- How many characters in a string will this regular expression capture? `/[abc]+/`
+- Will `/[^abc]+/` match `a`? 
 - What online tool is helpful for using Regular Expressions with Ruby?
 - How do you run a specific test using the `--name` flag?
+- If `pry` doesn't work in a Ruby project, what is a good alternative to try?
 
 ----------------------------
 
