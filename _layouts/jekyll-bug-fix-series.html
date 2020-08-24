@@ -13,7 +13,8 @@ layout: default
   
   <h3>{{ page.series_part }} Table of Contents</h3>
   
-  {% include toc.html html=content %}
+  {% include anchor_headings.html html=content anchorBody="#" anchorClass="anchor"%}
+
   
   {{ content }}
 </div>
