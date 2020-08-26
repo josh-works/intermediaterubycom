@@ -132,7 +132,14 @@ It is to your advantage to quickly gain basic working knowledge and experience w
 
 👋 I'm Josh! 
 
-[Read more about me on `/about`](/about)
+I'm a software developer.
+
+## Quotes
+
+> I love the README explainer! So much more thorough than the Nokogiri documentation, really great stuff.
+
+>  I was able to go from 0 to `scraping the [Hacker News Comment thread]` with only this repo and the Nokogiri docs as resources.
+
 
 
 
@@ -170,9 +177,6 @@ if I were your boss:
 If you want your money back anytime between when you purchase and a year from when you purchase, just let me know and you'll get it all back.
 
 Quotes from people about various resources?
-
-
-
 
 <script async data-uid="5b13b420e3" src="https://josh-thompson.ck.page/5b13b420e3/index.js"></script>
 
