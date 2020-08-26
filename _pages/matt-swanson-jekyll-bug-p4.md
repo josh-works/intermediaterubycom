@@ -65,9 +65,18 @@ Coming soon!
 
 ----------------------------
 
-That's the end of this series! 
+## If I helped you, can you help me?
 
-I would love to hear your thoughts, if you've not emailed me already. The easiest way is to pop your email in below, and reply to the first email you get from me. 
+This was an unusual project, wasn't it? 
+
+I have three ways I am going to ask for your help. Choose any, all, or none of them:
+- Drop your email in below. I'll ask some questions via email, you can reply, and we'll go from there.
+- A 30 minute zoom call! I'll ask questions, you'll provide answers, and I'll use that time to gether tons of valuable feedback. [Schedule that call here]()
+- If you thought it was good, but don't really wanna do the email or video call thing, could you send this URL to a friend, or tweet about it? 
+
+
+
+
 
 <script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
 
