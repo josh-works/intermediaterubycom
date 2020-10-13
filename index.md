@@ -3,180 +3,58 @@ layout: default
 title: Home
 ---
 
-## Deliver more value faster
+## Questions for you
 
-As a software developer, you deliver value to the company that pays you.
+👉 Have you read (or felt guilt about not reading) _Practical Object-Oriented Design in Ruby_ by Sandi Metz?
 
-All else equal, it's better to deliver _a greater quantity_ of value _more quickly_. 
+👉 Have you read _Refactoring: Ruby Edition_ by [Jay Fields], or it's predecessor and Java-focused _Refactoring: Improving the Design of Existing Code_
 
-Greater quantity, faster. 
+👉 Have you paid Avdi Grimm for any of his amazing [Ruby Tapas](https://www.rubytapas.com/) screencasts or his [Mastering the Object-Oriented Mindset in Ruby and Rails](https://avdi.codes/courses/moom/) course?
 
-I'm going to help you with this.
+👉 Do you consider yourself to be an early-career software developer?
 
-What might this value delivery look like for you, a software developer?
+👉 Do you work in Ruby and/or Rails? 
 
-- If a customer reports a critical bug, _you fix it_. 
-- If your customers would be well-served by a critical feature, _you build it_. 
-- If your sales team would be more effective with some custom tooling, _you build it_.
-- If your marketing team wants more data to segment their communications, _you get them the data_. 
-- If another division in your organization needs access to some of your data, _you build a secure way for them to access it_. 
+👉 Even with all of the existing resources out there, _do you still feel a bit stuck?_ 
 
-What's the common theme running through these examples?
+**I feel your pain, and I can help through this stage in your career.**
 
-_Solving business problems, often with software_
 
-I want you do deliver more value to:
+I'm Josh. I'm on a quest to figure out how to most effectively help early-career software developers most quickly become "mid-career" software developers. I got my first software development job in 2017, and spent a long time feeling frustrated about my pace of growth while on the job. 
 
-- your team
-- your product manager
-- your customers
-- your manager
-- the business units you support
-- _yourself_
+Many, many other software developers who've gotten their first job have told me they also felt frustrated with their pace of learning and growth. 
 
-> Hold up, Josh. Are you saying I can deliver more value _to myself_? You lost me there.
+So, how do we fix this problem? How do we learn more, in order to build better systems? Why should we even care about this?
 
-Yes. As a software developer, you get rewarded in proportion to the value you deliver. 
+I'll unpack each of these answers below. For now, just know that I'll help you fix the problem, I'll help you learn "meta-skills" along the way, and you'll understand why this learning you'll do is deeply important to you, your employer, and any future employer down the road. 
 
-Who do you think gets paid and respected more? The person who: 
+You'll be less frustrated, more satisfied, more respected, more patient, and your career trajectory will be fundamentally changed.
 
-1. earns their company $250,000/yr?
-2. earns the company $750,000/yr?
-3. earns the company $2,000,000/yr?
+--------------------
 
-When you deliver more value to your company, you reap benefits like:
+So, how do we do all of this?
 
-- Higher pay
-- More respect/appreciation from your peers
-- Access to opportunities to work on high-value projects
-- More flexibility around how much and when you work
+We have to ensure we have adequate skills across four domains:
 
-Everyone wins.
+1. Writing software
+1. Solving problems
+1. Understanding others
+1. Communicating effectively
 
-## How we'll work together to help you become a better software developer
+If you have adequate skills in only one or two of these domains, you'll find yourself floundering and you might not know why. 
 
-I hope you're convinced that good things come to those who deliver value. 
+If you build skills across all four domains, you'll find yourself enjoying your work, because you'll be effective even as you're being challenged. 
 
-Understanding the above is the easy part. The hard part is figuring out what to do about it.
+You'll deliver more value to your team, your company, and your customers, and you'll enjoy the day-to-day of your work.
 
-That's where I come in. 
+## Don't take my word for it
 
-## Some of the topics you'll learn:
+Here's what a few others have said about things I've made:
 
-Working together, you'll learn how to be an effective member of your team as you work on features/bugs related to:
+> I've read the first two parts of your [Open-source bug fixing with Matt Swanson] series so far, and I LOVE IT. I love how you're using video to get an expert to verbalise what they're thinking. This is so, so good. 
 
-- Background jobs with Redis & Sidekiq
-- Active Cable & Websockets
-- ActiveRecord
-- Cron jobs
-- Sending email from a Rails app
-- Receiving and processing email in a rails app
-- How to hook up a Rails app with a third-party ESP 
-- Sending text messages
-- logging
-- Building JSON API endpoints
-- Token authentication for endpoints
-- Rubocop setup/configuration
-- load testing your application with Siege
-- How to interpret `rack-mini-profiler` output
-- Setting up Application Performance Monitoring with DataDog or NewRelic
-- Using Mixpanel in Rails for A/B testing
-- Rake tasks to do all sorts of things
-- Shell scripting
-- Deplying an 'as good as native' Android/iOS app using Turbolinks, inspired by [RailsConf 2016 - Turbolinks 5: I Can’t Believe It’s Not Native! by Sam Stephenson](https://www.youtube.com/watch?v=SWEts0rlezA)
-- Stripe integration(s)
-- [Mapbox](https://www.mapbox.com/) in Rails
-- [Leaflet](https://leafletjs.com/) in Rails
-- Sorbet and Static Type Checking in Ruby
+_\- [@Cedric Chin](https://mobile.twitter.com/ejames_c)_
 
+> Everyone I have talked to in the cohort, including myself credits you with huge gains in learning/understanding **because of the videos.** Being able to have concise instruction that I can pause, or slow down, or rewind has really allowed me to learn some basics at my own pace, without the general nervous anxiety I can get, when I feel like I missed something.
 
-## How you'll actually learn this information
-
-You might look through the above list and think
-
-> This is a lot to learn. How can someone learn all this alongside their regular job? 
-> 
-> I cannot stop working to go into full-time study mode!
-
-Quite right! It's _hard_ to move knowledge from one person's head to someone else's head. 
-
-I've got a few tools in the toolkit here, to help you learn new information as fast as possible:
-
-1. Detailed Guides
-1. Video walk-throughs
-1. Production Code & Examples
-1. Hyper-focused Obstacle Courses (Drills focusing on: ActiveRecord, Nokogiri, Regexs, etc)
-
-Depending on the topic at hand, a different mix of resources is the most appropriate.
-
-Every resource I make, I test-drive with early-career software developers. 
-
-We "pair" on what I've made, and based on what I observe and their feedback, I refine what I've made to it more quickly delivers value, in a more easily digestible way. 
-
-
-## Who is this designed for?
-
-These resources are laser-focused on a very specific group of people:
-
-**Early-career software developers who work at least partially in Ruby/Rails**
-
-These guides are not intended for experts who have deep familiarity with the specific technology. 
-
-On the other hand, if you're a bit of a generalist software developer, hired to work on a Rails application, at various times you'll cross paths with many of the technologies I've listed above. 
-
-It is to your advantage to quickly gain basic working knowledge and experience with the technology. 
-
-## Frequently Asked Questions
-
-### Who are you?
-
-👋 I'm Josh! 
-
-I'm a software developer.
-
-## Quotes
-
-> I love the README explainer! So much more thorough than the Nokogiri documentation, really great stuff.
-
->  I was able to go from 0 to `scraping the [Hacker News Comment thread]` with only this repo and the Nokogiri docs as resources.
-
-
-
-
-### Who is this designed for?
-
-I want to help out early-career Ruby/Rails developers. 
-
-I'm building what I wish had existed when I first started working, so I'd spend less time fumbling with new technologies, and more time solving business problems. 
-
-In 2017, when I started my first job, I worked primarily in Ruby/Rails (with some Elixir), and felt like I spent a lot of the first two years stumbling around in the dark. I'd finish one ticket, having just been exposed to some complicated concept in programming, and before that new information had time to consolidate in my brain, I was on to another ticket, wrestling with another giant piece of abstraction. 
-
-### Who is this _not_ designed for?
-
-If you consider yourself to be a senior developer, or maybe not even a senior developer, but you don't see much value in expanding your skillset, these resources might not be a good fit for you.
-
-If you're quite aware of your relative inexperience, however, and find yourself regularly wondering if you've got the skills and knowledge you need to do your job, _you're in the right place_. 
-
-### What if I want to stop halfway through?
-
-
-Advice:
-- If video w/open source people, start with structure of what I want to cover:
-- Lesson 1, refactoring legacy code
-
-Start with end thing, in bullet points
-don't do anything else until I redo home page, "what does intermediate ruby mean: Title"
-
-if I were your boss:
-- No idea how or why any of this makes sense
-- environment setup? 
-
-
-### What if I want my money back
-
-If you want your money back anytime between when you purchase and a year from when you purchase, just let me know and you'll get it all back.
-
-Quotes from people about various resources?
-
-<script async data-uid="5b13b420e3" src="https://josh-thompson.ck.page/5b13b420e3/index.js"></script>
-
+_\- Jordan Beck_
