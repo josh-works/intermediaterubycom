@@ -7,7 +7,7 @@ title: Home
 
 👉 Have you read (or felt guilt about not reading) _Practical Object-Oriented Design in Ruby_ by Sandi Metz?
 
-👉 Have you read _Refactoring: Ruby Edition_ by [Jay Fields], or it's predecessor and Java-focused _Refactoring: Improving the Design of Existing Code_
+👉 Have you read _Refactoring: Ruby Edition_ by Jay Fields, or it's predecessor and Java-focused _Refactoring: Improving the Design of Existing Code_
 
 👉 Have you paid Avdi Grimm for any of his amazing [Ruby Tapas](https://www.rubytapas.com/) screencasts or his [Mastering the Object-Oriented Mindset in Ruby and Rails](https://avdi.codes/courses/moom/) course?
 
@@ -15,14 +15,19 @@ title: Home
 
 👉 Do you work in Ruby and/or Rails? 
 
+👉 Do you pair as much as you can with senior developers?
+
 👉 Even with all of the existing resources out there, _do you still feel a bit stuck?_ 
 
 **I feel your pain, and I can help through this stage in your career.**
 
+I'm Josh. I'm on a quest to figure out how to most effectively help early-career software developers most quickly become "mid-career" software developers. I got my first software development job in 2017, and spent a long time feeling frustrated about my pace of growth while on the job.
 
-I'm Josh. I'm on a quest to figure out how to most effectively help early-career software developers most quickly become "mid-career" software developers. I got my first software development job in 2017, and spent a long time feeling frustrated about my pace of growth while on the job. 
+Fast-forward to 2020, I've certainly grown into a solid developer, but I feel like I still have holes in my knowledge, and I should know more than I do, with my four years in the industry. 
 
-Many, many other software developers who've gotten their first job have told me they also felt frustrated with their pace of learning and growth. 
+**I will help you gain the experience of my four years in way, way less time than it took me.** 
+
+Many, many other software developers who are in their first job have told me they also felt frustrated with their pace of learning and growth. 
 
 So, how do we fix this problem? How do we learn more, in order to build better systems? Why should we even care about this?
 
@@ -58,3 +63,15 @@ _\- [@Cedric Chin](https://mobile.twitter.com/ejames_c)_
 > Everyone I have talked to in the cohort, including myself credits you with huge gains in learning/understanding **because of the videos.** Being able to have concise instruction that I can pause, or slow down, or rewind has really allowed me to learn some basics at my own pace, without the general nervous anxiety I can get, when I feel like I missed something.
 
 _\- Jordan Beck_
+
+
+
+
+------------------------------
+
+## Begin Your Journey
+
+I've got a few different resources, and this entire curriculum is under rapid development. The easiest way to follow along is with your email address:
+
+<script async data-uid="5b13b420e3" src="https://josh-thompson.ck.page/5b13b420e3/index.js"></script>
+
