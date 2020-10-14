@@ -75,3 +75,6 @@ I've got a few different resources, and this entire curriculum is under rapid de
 
 <script async data-uid="5b13b420e3" src="https://josh-thompson.ck.page/5b13b420e3/index.js"></script>
 
+I'll start introducing resources like my [Intermediate Ruby Obstacle Course](https://github.com/josh-works/intermediate_ruby_obstacle_course) and [Pairing on Open Source Software: Bugfixing with Matt Swanson](https://intermediateruby.com/make-oss-contributions-part-0-introduction)
+
+Oh, and once you punch in your email address, I'll send you some questions. I promise it'll be worth your time, and it's efforless to unsubscribe. (I will in fact strongly request you unsubscribe, a few emails down the road.)
