@@ -7,14 +7,9 @@ permalink: /about
 image: ""
 ---
 
-
 👋 I'm Josh! 
 
-<add photo>
-
-<short story about me>
-
-Pretty much every experienced developer I spoke with, I asked some variation of:
+Pretty much every experienced developer I spoke with, I have asked some variation of:
 
 > How did grow to become a better software developer? What do you recommend to others as they pursue improving their skills?
 
@@ -35,6 +30,11 @@ This never has sat right with me, though, for a few reasons:
 ### Obstacle Courses
 
 One project I've made so far is a [obstacle course for parsing webpages with Nokogiri](https://github.com/josh-works/intermediate_ruby_obstacle_course/tree/master/nokogiri). I spent about thirty hours learning Nokogiri, and the way it's packaged, you can learn most of what I learned, in about _4 hours_.
+
+### Small build-a-longs that turn into finished projects
+
+- https://random-hn-blog.herokuapp.com/
+- https://github.com/josh-works/ruby_web_scraping
 
 ### Quotes
 
