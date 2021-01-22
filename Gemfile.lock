@@ -102,7 +102,6 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-paginate
   jekyll-twitter-plugin
-  tzinfo-data
 
 RUBY VERSION
    ruby 2.5.8p224
