@@ -10,6 +10,10 @@ permalink: sinatra-basics
 image: /images/title_image.jpg
 ---
 
+-----------
+**Completion Status**: work-in-progress
+------------
+
 I want to build a Sinatra app that I can use to teach others about APIs, HTTP verbs, networking, and more. 
 
 It's 2:45p, 01/22/21. 
