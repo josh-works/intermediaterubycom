@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Guiding Principles"
+title:  "Sending And Receiving Email in a Rails Application"
 published: false
 description: ""
 date:  2020-01-31 06:00:00 -0700
@@ -24,7 +24,13 @@ The top-ranked result for "email in rails" (according to Duck Duck Go) is:
 
 That's OVER SIX YEARS AGO!
 
-I really wanted to grok the full basics of email in Rails apps - for a bunch of reasons.
+A few years ago, a co-worker and I spent two days working on a project related to receiving email, and we got it kinda-working pretty quickly. (There were a bunch of moving pieces, receiving email was only part of the project.)
+
+[Exploring source code via Griddler and Griddler-Mailgun](https://josh.works/exploring-source-code-via-griddler-and-griddler-mailgun)
+
+-------------------------
+
+I really wanted to grok the full basics of email in Rails apps, both sending _and_ receiving email.
 
 I've spent a lot of time professionally dealing with email, but never from the technical "insider's technical perspective". 
 

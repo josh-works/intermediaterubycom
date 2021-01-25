@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sinatra Basics (Part 1)"
-published: false
+published: true
 description: ""
 date:  2020-01-31 06:00:00 -0700
 categories: [basics]
@@ -11,7 +11,16 @@ image: /images/title_image.jpg
 ---
 
 -----------
-**Completion Status**: work-in-progress
+## How Done Is This Post?
+
+_Anything I write ranges from "super rough notes-as-i-go, don't even expect full sentences" to "this post is done and proven to deliver what it promises to deliver"_
+
+1. Scratch-pad, take-notes-as-I-go **<-- we are here**
+1. Review post, clean up for first 'share'
+1. I `mkdir` new directory, follow my own steps, clarify
+1. Integrate feedback/answer questions from others
+1. Final cleanup, post is considered `done` unless someone reaches out with further questions
+
 ------------
 
 I want to build a Sinatra app that I can use to teach others about APIs, HTTP verbs, networking, and more. 
