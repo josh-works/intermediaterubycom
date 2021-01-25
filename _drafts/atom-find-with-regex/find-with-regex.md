@@ -84,6 +84,6 @@ Use the `start of string` regex character, followed by what you're looking for:
 
 (don't forget the space)
 
-![regex screenshot](/_drafts/atom-find-with-regex/regex-find-and-replace.jpg)
+![regex screenshot](/images/regex-find-and-replace.jpg)
 
 
