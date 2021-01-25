@@ -29,7 +29,7 @@ future: true
 twitter_username:   "josh_works"
 
 # pages in nav bar
-include: ['_pages', '_posts']
+include: ['_pages']
 
 # pages across header
 # seems to need `jekyll build` to catch updates on localhost
