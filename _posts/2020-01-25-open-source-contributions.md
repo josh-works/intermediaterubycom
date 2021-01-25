@@ -1,11 +1,11 @@
 ---
-layout: jekyll-bug-fix-series
-title: "Appendix: Be In The Top 25% Of All OSS Contributors"
+layout: post
+title: "Be In The Top 25% Of All OSS Contributors"
 published: false
 description: "The book 'Working in Public' paints a clear path towards being a skilled OSS contributor. It doesn't necessarily make it sound appealing, but you can certainly gain the skill!"
 permalink: /work-in-public-oss-contribution-skill
 image: ""
-series_part: "appendix-oss-skill"
+series_part: "oss-skill"
 ---
 
 I'm reading [Working in Public: The Making and Maintenance of Open Source Software](https://www.amazon.com/dp/0578675862/) by [Nadia Eghbal](https://nadiaeghbal.com/), and wanted to capture something she said, talking about open source contributions:
