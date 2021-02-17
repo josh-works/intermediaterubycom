@@ -230,21 +230,14 @@ Using [new.css](https://newcss.net/), and a bare-bones index.html, check out:
     Its a Starter!
   </header>
     <h1>Hello, world. I'm a baby sinatra application</h1>
-    
-    <form>
-     <label for="fname">First name:</label><br>
-     <input type="text" id="fname" name="fname"><br>
-     <label for="lname">Last name:</label><br>
-     <input type="text" id="lname" name="lname">
-    </form> 
-    
-    <details>
-      <summary>Click me!</summary>
-      <p>Lorem ipsum dolor sit amet.</p>
-    </details>    
+     
 </body>
 </html>
 ```
+
+Next chapter, we'll talk about:
+
+
 
 
 ### Resources
@@ -252,3 +245,4 @@ Using [new.css](https://newcss.net/), and a bare-bones index.html, check out:
 - [Getting Started (Sinatra)](http://sinatrarb.com/intro.html)
 - [How to get Sinatra to auto-reload the file after each change?](https://stackoverflow.com/questions/1247125/how-to-get-sinatra-to-auto-reload-the-file-after-each-change)
 - [How do you set all of your Sinatra responses to be JSON? (StackOverflow)](https://stackoverflow.com/questions/27644016/how-do-you-set-all-of-your-sinatra-responses-to-be-json)
+- [a collection of today-i-learned/sinatra posts, started while writing this very post](https://github.com/josh-works/til/tree/main/sinatra)
