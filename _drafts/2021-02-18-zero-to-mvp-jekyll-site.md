@@ -345,9 +345,33 @@ Nothing. Two hours in, and I think I'm making a smidgen of progress. I'm remembe
 
 I'm figuring it out, slowly. I might be able to appreciate bits of my copy of [High Performance Browser Networking](https://www.amazon.com/High-Performance-Browser-Networking-performance/dp/1449344763) now.
 
-## Step 8: Connect your custom domain
+Sigh. Do I need CNAME records? A? AAA? I don't even know what it all means.
+
+Found something useful in Github docs: [https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain](https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
+
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+## Step ???: IT WORKS
+
+![it works](/images/2021-02-19 at 9.12 AM-its-live.jpg)
+
+Yay! I can _finally_ visit: [https://afailuretodisagree.com/](https://afailuretodisagree.com/) and it loads my Jekyll site.
+
+Wow. That was difficult, confusing, full of uncertainty, and I'm not actually sure what made the difference. 
+
+I'll do this whole thing a second time on another site at some point. 
+
+This is one more hour in (not quite a full hour, maybe 40 minutes + some email).
 
 ## Step 9: 
 
 ### Notes
 
+- [Why a domain’s root can’t be a CNAME — and other tidbits about the DNS](https://www.freecodecamp.org/news/why-cant-a-domain-s-root-be-a-cname-8cbab38e5f5c/)
+- [Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site)
+- [Using Github Pages with Google Domains and Cloudflare (randydeng.com)](https://www.randydeng.com/website/2019/07/08/using-github-pages-with-google-domains-and-cloudflare.html)
