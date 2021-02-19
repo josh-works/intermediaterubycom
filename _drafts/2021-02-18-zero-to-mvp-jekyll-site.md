@@ -311,6 +311,39 @@ When I visit [https://www.afailuretodisagree.com/](https://www.afailuretodisagre
 
 Wow. Now 11:28, another hour has passed, and I don't have a website online. I'm glad I'm writing this out, as I'm way farther into this than I would have expected. Check out this commit here: [02951b582dece6d59024dbca7000bdbea5bc58e2](https://github.com/josh-works/intermediaterubycom/commit/02951b582dece6d59024dbca7000bdbea5bc58e2)
 
+JK doing a little more
+
+## Step 7.05 Get Cloudflare nameservers, add to google domains account
+
+OK, so you don't have to guess on the cloudflare nameservers - they'll probably be the same for you as they are for me, I've been using these for years. They are:
+
+```
+elaine.ns.cloudflare.com
+elliot.ns.cloudflare.com
+```
+
+![cloudflare nameservers](/images/2021-02-18 at 11.33 PM-dns.jpg)
+
+And here's how you add them:
+
+![cloudapp](/images/dns.gif)
+
+OK, NOW you can take a break. Cloudflare and Google both say that it can take two days for these changes to fully propogate throughout.
+
+As of 2021-02-18 11:40p, [https://www.afailuretodisagree.com/](https://www.afailuretodisagree.com/) doesn't go anywhere.
+
+but what about:
+
+```
+https://www.afailuretodisagree.com/
+http://www.afailuretodisagree.com/
+www.afailuretodisagree.com/
+afailuretodisagree.com
+```
+
+Nothing. Two hours in, and I think I'm making a smidgen of progress. I'm remembering now why it felt so complicated to me last time around. It _was_ complicated, I remember googling a lot about various record types, how they worked, etc.
+
+I'm figuring it out, slowly. I might be able to appreciate bits of my copy of [High Performance Browser Networking](https://www.amazon.com/High-Performance-Browser-Networking-performance/dp/1449344763) now.
 
 ## Step 8: Connect your custom domain
 
