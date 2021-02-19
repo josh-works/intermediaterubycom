@@ -145,11 +145,172 @@ Now I'm looking at [https://github.com/josh-works/aftd/tree/main](https://github
 
 So, in [https://github.com/josh-works/aftd/tree/main](https://github.com/josh-works/aftd/tree/main), I navigate to settings, scroll down to "github pages"
 
-[github pages](/images/2021-02-18 at 8.10 PM.jpg)
+![github pages](/images/2021-02-18 at 8.10 PM.jpg)
 
 siiiight I'm stuck. It's 8:15, I have to call it for a night.
 
-## Step 7: IT LIVES! Your site is live on the internet
+Provenance of the above `2760c20edcbdf8f5bf9538ef5461489ed7b8e80a`. 
+
+_note: 10:15p, i'm carrying onward a bit! My parents are in town, had a nice time hanging out, everyone's in bed, so I wanna push this onward a bit._
+
+## Step 6.01 Site not reachable
+
+My site seems to be trying to get published here: [https://josh.works/aftd/](https://josh.works/aftd/)
+
+It also 404s, and I get a page build error. In my inbox, specifically, I get more info:
+
+> The page build failed for the `main` branch with the following error:
+> 
+> No `/docs` folder was found to build GitHub Pages. Check the source setting for this repository. For more information, see [https://docs.github.com/github/working-with-github-pages/troubleshooting-jekyll-build-errors-for-github-pages-sites#missing-docs-folder](https://docs.github.com/github/working-with-github-pages/troubleshooting-jekyll-build-errors-for-github-pages-sites#missing-docs-folder).
+> 
+> For information on troubleshooting Jekyll see:
+> 
+>   [https://docs.github.com/articles/troubleshooting-jekyll-builds](https://docs.github.com/articles/troubleshooting-jekyll-builds)
+
+Bleh. It's _possible_ that if I didn't already have a site published on Github pages (`josh.works` is "published" on `josh-works.github.io`. If you visit `josh-works.github.io` you'll get a `301 Moved Permanently` redirect to `http://josh.works`)[^http]
+
+[^http]: I wonder if that should redirect to `https://josh.works'`. Here's how I can see:
+
+  `$ curl -v josh-works.github.io`
+  
+Fortunately, this site (`intermediateruby.com` is hosted on Github pages with a custom domain, so let me go check the settings for this very own page. [git repo for intermediateruby](https://github.com/josh-works/intermediaterubycom/))
+
+![gh page settings](/images/intermediate-ruby-gh-page-settings.jpg)
+
+So I wonder if it's as simple as putting in a custom domain?
+
+Nooope, that doesn't seem right. I finally figured it out. I think I have the branch name wrong. Let me try publishing everything off of a `gh-pages` branch.
+
+Gosh, I think that's it. I remember trying to rename the `master` branch of my personal site to `main`, couldn't, etc. I didn't think I'd remember `gh-pages`, so I just left it as master.
+
+When I `jekyll new`'ed, and grabbed the screenshot of my terminal, I was like 
+
+> ew, I don't want to put a screenshot out there foreveryone to see with my git branch named `master`. That's dumb. 
+
+So I did `gb -b main`, `gpo`, and expected the right branch to be up there. I remember the github support team emailing me back saying "eh, we don't support a branch named `main` yet".
+
+Anyway, lets fix our branch situation:
+
+![fix branch](/images/terminal-gh-pages.jpg)
+
+```shell
+git branch -mv gh-pages
+gpo gh-pages
+gpo :main # I was hoping this gonna delete the `main` branch on gh, but didn't work. ¯\_(ツ)_/¯ 
+```
+
+Update settings:
+
+![use correct branch](/images/gh-page-branch.jpg)
+
+## Step 6.02 Still Broken, nothing at `https://josh.works/aftd/`
+
+Still broken - supposedly site is published at [https://josh.works/aftd/](https://josh.works/aftd/), but it just loads an empty page.
+
+When I `curl https://josh.works/aftd/`, nothing comes back. Try it yourself, in your terminal. If you get _anything_ back, besides a single new line, I've fixed this.
+
+![lol nothing came back with curl](/images/2021-02-18 at 10.38 PM.jpg)
+
+
+
+## Step 6.03 try adding custom domain (our end goal anyway)
+
+Lets try adding a custom domain instead. So, back to your settings. I punch in `afailuretodisagree.com`, because I own the domain, and...
+
+I'm suspicious:
+
+![no way this worked](/images/too-easy.jpg)
+
+there's no way this worked. I don't belive Github. There's nothing stopping me from entering `stonks.com` (which I don't own, but check it out, it's awesome: [https://stonks.com/](https://stonks.com/))
+
+![stonks.com](/images/2021-02-18 at 10.43 PM-stonks.jpg)
+
+## Step 7: Set up Google Domains
+
+off to [domains.google.com/registrar](https://domains.google.com/registrar/):
+
+![i own these](/images/2021-02-18 at 10.44 PM-domain-01.jpg)
+
+If you don't have a domain here you want/can use, buy another one. Smash the `get a new domain` button, or visit [https://www.domainhole.com/generator/](https://www.domainhole.com/generator/) for inspiration and ideas on cheap domains. 
+
+Find an available domain _anywhere_, and buy it in your Google Domains account. If you don't have a google domains account, create one, add a credit card, etc. 
+
+Ooooh gosh, custom nameservers. That's Cloudflare. I just looked to see how I have `intermediateruby.com` configured in `domains.google.com`, and it's got custom nameservers pointing to Cloudflare.
+
+Cloudflare... runs the internet, IMO. Not quite the same as AWS, but Cloudflare is _everywhere_. They sit "between" AWS and people's devices, same as how Amazon's warehouses sit close to the end-user[^in-the-us].
+
+[^in-the-us]: Amazon Prime is entirely dependent on pre-placing items close to the customer. I don't actually like this service, as it's horrific for the environment and economy. (super wasteful, hidden costs because... _waves hands in air_ everything, and they're opening up a distribution facility near my house. Amazon cannabolizes local economy with externalized costs. I don't blame them for it, but I don't like it.)
+
+## Step 7.01 Set up cloudflare
+
+Gosh this is getting complicated. I'm way over my target time of "having a new website set up from scratch in 10 minutes". I'm about two hours into this, though, admittedly, I'm writing this blog post as I work through the process.
+
+I last went through this process over a year ago (with `intermediateruby.com`) and I remember it being surprisingly difficult. So, I'm not surprised that when I say "go figure this out" to people that _have run zero websites, instead of the 5+ I've dealt with over the years_ they feel sandbagged.
+
+Onward...
+
+Set up an account at [https://www.cloudflare.com/](https://www.cloudflare.com/). It's free.[^1-password] 
+
+[^1-password]: Please use 2fa and a strong password. I use [1password](https://1password.com/) religiously. (really, it's religious). My wife uses it, my mother-in-law, my whole family, it's such a powerful tool for managing passwords. 
+
+  As a software developer, I have to manage dozens-to-hundreds of logins to various systems. I just checked my account. I've got almost 900 _items_ in 1password. Many of those are logins. If creating a strong, random password on a new site isn't painless to you, _it needs to be_. Use 1Password. I don't make money from you being their customer.
+
+I have a free Cloudflare plan, so you should be able to have one too. 
+
+Log into your account, on the `home` page, click `Add a Site`:
+
+![add a site](/images/2021-02-18 at 11.02 PM-cloudflare.jpg)
+
+## Step 7:02 Cloudflare: Select the free plan (I often see upsells here. Hunt around for the free plan button.)
+
+## Step 7.03 Cloudflare: CNAME? MX records? huh?
+
+You'll see something like this:
+
+![what the heck does this mean?](images/2021-02-18 at 11.06 PM.jpg)
+
+> Review your DNS records
+> 
+> 1 CNAME
+> Verify that DNS records below are configured correctly. These records take effect in Cloudflare after you update your nameservers.
+
+What does that mean?
+
+Time to check what I've got configured for `intermediateruby`:
+
+![wow a lot](/images/2021-02-18 at 11.09 PM-cloudflare-dns.jpg)
+
+Sigh - this still isn't what I need.
+
+## Step 7.04 add a file to your repo (`CNAME`)
+
+I googled around, found [Using Github Pages with Google Domains and Cloudflare](https://www.randydeng.com/website/2019/07/08/using-github-pages-with-google-domains-and-cloudflare.html). They said:
+
+> Github Pages Configuration
+
+> To configure Github Pages, add a file called CNAME to the root directory of your Github repository. Inside this file, you’ll put your domain name (e.g. www.randydeng.com). This tells Github where your domain is located.
+
+Oh right! 
+
+```
+Echo "www.aftd.com" >> CNAME
+git add . && git commit -m "Adds CNAME" && git push
+```
+
+When you `git push` you'll probably run into some conflicts; when you added the custom domain setting in Step 6, git added a `CNAME` file to the repo. I didn't know that, so I was getting merge conflicts when trying to push this branch, unexpectedly. 
+
+I didn't want to force push without knowing what I was overwriting.
+
+Here's what I did:
+
+![scoping problems](/images/2021-02-18 at 11.19 PM-git-conflict.jpg)
+
+Anyway, now the repo has a `CNAME` file in it, the content of which is `www.afailuretodisagree.com`, overwrote an earlier commit: [0e901771d27ae3ec454ffc05bb83b278be738ec9](https://github.com/josh-works/aftd/commit/0e901771d27ae3ec454ffc05bb83b278be738ec9)
+
+When I visit [https://www.afailuretodisagree.com/](https://www.afailuretodisagree.com/), I get nothing.
+
+Wow. Now 11:28, another hour has passed, and I don't have a website online. I'm glad I'm writing this out, as I'm way farther into this than I would have expected. Check out this commit here: []()
+
 
 ## Step 8: Connect your custom domain
 
