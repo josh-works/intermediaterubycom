@@ -8,6 +8,18 @@ image: ""
 series_part: ""
 ---
 
+## How Done Is This Post?
+
+_Anything I write ranges from "super rough notes-as-i-go, don't even expect full sentences" to "this post is done and proven to deliver what it promises to deliver"_
+
+1. Scratch-pad, take-notes-as-I-go **<-- we are here**
+1. Review post, clean up for first 'share'
+1. I `mkdir` new directory, follow my own steps, clarify
+1. Integrate feedback/answer questions from others
+1. Final cleanup, post is considered `done` unless someone reaches out with further questions
+
+------------------
+
 I was chatting with a turing Alumni recently, about blogging and setting up a personal website. 
 
 I've told _so many Turing students_ that they should blog, at least via Medium, but sometime shortly thereafter, they should move to a personal website.[^i-can-explain-why]
