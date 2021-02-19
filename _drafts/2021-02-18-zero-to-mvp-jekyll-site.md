@@ -309,7 +309,7 @@ Anyway, now the repo has a `CNAME` file in it, the content of which is `www.afai
 
 When I visit [https://www.afailuretodisagree.com/](https://www.afailuretodisagree.com/), I get nothing.
 
-Wow. Now 11:28, another hour has passed, and I don't have a website online. I'm glad I'm writing this out, as I'm way farther into this than I would have expected. Check out this commit here: []()
+Wow. Now 11:28, another hour has passed, and I don't have a website online. I'm glad I'm writing this out, as I'm way farther into this than I would have expected. Check out this commit here: [02951b582dece6d59024dbca7000bdbea5bc58e2](https://github.com/josh-works/intermediaterubycom/commit/02951b582dece6d59024dbca7000bdbea5bc58e2)
 
 
 ## Step 8: Connect your custom domain
