@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Commit Tracing In Pry"
-published: false
+published: true
 description: "Applying Chelsea Troy's Leveling Up Skill of Commit Tracing"
 permalink: /commit-tracing-in-pry
 image: ""
@@ -109,10 +109,107 @@ Here's some interesting commits that I might use for the next step:
 
 
 
+## Picking a Commit: `Add Pry::Env`
+
+I decided to start with [Add Pry::Warning](https://github.com/pry/pry/commit/473bc9f2d6a0ebd93c9a09ea3c699c14e01330b0)
+
+First, I'm going to check out the repo to right before the commit that adds `Pry::Warning`
+
+Here's how to find that commit:
+
+![check out the prior commit](/images/2021-02-23 at 9.52 AM-checkout.jpg)
+
+Next, use `git diff <sha-of-the-next-commit>` to see the contents of this pull request, represented inside of your editor:
+
+```
+git diff 7ce5ca
+```
+
+Here's how I grabbed the commit sha:
+
+![get the sha](/images/2021-02-23 at 9.56 AM-get-current-sha.jpg)
+
+Now, if you do the above `git diff` command, it's comparing the current commit against the future commit, which shows what the current commit is missing. 
+
+Here's the output:
+
+![git diff output](/images/2021-02-23 at 10.00 AM-git-diff-wrong-direction.jpg)
+
+This isn't _exactly_ what I want - I want to see the code as what's added, not what's deleted.
+
+Alternatively, I'll check out the commit that adds the feature:
+
+```
+git checkout 7ce5ca
+```
+
+And now I'll diff this feature commit _against the prior commit_, which we could either hardcode the commit to diff, or use a shortcut.
+
+Run both of these in your editor:
+
+```shell
+git co 7ce5ca # co is aliased to 'check out'
+git diff 17bdfd7 # diffs against the prior commit
+git diff HEAD~1 # HEAD is "wherever the repo is set right now"
+               # ~1 means "one commit earlier", you could 
+               # also drop the 1, because if no number is 
+               # provided, it assumes you mean 1
+
+git diff HEAD~ # these last two commands are the same. Actually, these are all ways of saying the same thing
+```
+
+Whatever method you use, here's what you'll see:
+
+![git diff looking good](/images/2021-02-23 at 10.06 AM-git-diff-good.jpg)
+
+### Write Out All Added Code, Including what file it's in
+
+Now I'm going to copy this code down on paper. I'll time how long this takes me: It's `Time.now` when I start. 
+
+[_music plays while Josh puts pen to paper_]
+
+OK! Finished. It took 9 minutes for me to write out that commit, by hand, on paper:
+
+_TODO: Add photos of paper, they're on my phone, 02/23/21_
+
+### Open the affected files in my editor:
+
+Now, I'm going to diverge a little from Chelsea's path. I'm going to open each changed file in my editor:
+
+```
+$ git diff HEAD~1 --name-only # shows the name of modified files
+$ git diff HEAD~1 --name-only | xargs atom
+```
+
+You'll end up with something like this: 
+
+![open files in atom](/images/2021-02-23 at 10.23 AM-open-in-atom.jpg)
+
+(I could have done `atom .` and used the fuzzy finder to open these individual files up in sequence, but that would have taken longer)
+
+I'm going to run the tests for just the affected spec. In atom, `shift-ctrl-c` copies the _relative_ path for the selected pane to my clipboard, and I can paste that in my terminal, and do `rspec ctrl-v`, or `rspec spec/env_spec.rb`
+
+> josh, that seems like a lot of work for just running a single test file
+
+Yeah, when I skip around a project, running many different test files, especially deeply-tested test files, I use the `shift-ctrl-c` thing _all the dang time_. 
+
+Tests pass!
+
+Now lets reset the repo to the prior commit, and _manually_ rebuild this commit, from paper. 
+
+## Reset repo to prior commit
+
+Boom. Here's what I just did:
+
+![reset stuff](/images/2021-02-23 at 10.28 AM.jpg)
+
+
+
+
 
 
 
 ### Notes, further reading
 
-- [](https://commoncog.com/blog/tacit-knowledge-is-a-real-thing/)
+- [Tacit Knowledge is a Real Thing](https://commoncog.com/blog/tacit-knowledge-is-a-real-thing/)
 - [How To Open A Specific Gem In A Specific Editor (github.com/josh-works/til)](https://github.com/josh-works/til/blob/main/ruby/open-specific-gem-in-editor-with-bundler.md)

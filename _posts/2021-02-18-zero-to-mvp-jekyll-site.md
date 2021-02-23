@@ -380,7 +380,13 @@ I'll do this whole thing a second time on another site at some point.
 
 This is one more hour in (not quite a full hour, maybe 40 minutes + some email).
 
-## Step 9: 
+## Step 9: Change Theme, see updates on your website
+
+OK, lets try changing the theme again, now that we know the changes will propogate to `afailuretodisagree.com`.
+
+OK. I changed to the `minimal-mistakes-jekyll` theme with two configuration changes, now it looks like:
+
+![minimal-mistakes](/images/2021-02-19 at 11.50 PM.jpg)
 
 ### Notes
 
