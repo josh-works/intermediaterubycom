@@ -221,6 +221,8 @@ The tests all pass.
 
 Siiiiiiiiigh this is annoying. The tests shouldn't pass. Why are they passing???
 
+## Rspec conventions
+
 Time to dig into RSPEC a bit. 
 
 First, what's this `specify` thing? Hashrocket with the explanation:
@@ -234,13 +236,23 @@ I'll have to "deconstruct" the `specify` block to get a pry closer to this line 
 We'll go from this:
 
 ```ruby
-specify { expect(described_class[key]).to eq('val') }
+context "when ENV contains the passed key" do
+  before { ENV[key] = 'val' }
+  after { ENV.delete(key) }
+
+  specify { expect(described_class[key]).to eq('val') }
+end
 ```
 to this:
 
 ```ruby
-it "should equal 'val'" do
-  expect(described_class[key]).to eq('val')
+context "when ENV contains the passed key" do
+  before { ENV[key] = 'val' }
+  after { ENV.delete(key) }
+
+  it "should equal 'val'" do
+    expect(described_class[key]).to eq('val')
+  end
 end
 ```
 
