@@ -16,6 +16,8 @@ layout: default
      {% unless forloop.last %} &bull; {% endunless %}{% endfor %}</p>
   {% endif %}
 
+  {% include toc.html html=content %}
+  {% include anchor_headings.html html=content anchorBody="#" anchorClass="anchor"%}
   {{ content }}
 </article>
 

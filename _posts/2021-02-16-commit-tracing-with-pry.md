@@ -2,10 +2,10 @@
 layout: post
 title: "Commit Tracing In Pry"
 published: true
+date: 2021-02-24 06:00:00 -0700
 description: "Applying Chelsea Troy's Leveling Up Skill of Commit Tracing"
 permalink: /commit-tracing-in-pry
 image: ""
-series_part: ""
 ---
 
 I'm working through [Leveling Up Skill #6: Commit Tracing](https://chelseatroy.com/2018/07/21/leveling-up-skill-6-commit-tracing/), as applied to the `pry` gem.
