@@ -204,7 +204,125 @@ Boom. Here's what I just did:
 ![reset stuff](/images/2021-02-23 at 10.28 AM.jpg)
 
 
+Running just the specs, without the actual code to make it run...
 
+When I add `require pry/env` and:
+
+```ruby
+# lib/env.rb
+class Pry
+  module Env
+    
+  end
+end
+```
+
+The tests all pass. 
+
+Siiiiiiiiigh this is annoying. The tests shouldn't pass. Why are they passing???
+
+Time to dig into RSPEC a bit. 
+
+First, what's this `specify` thing? Hashrocket with the explanation:
+
+[RSpec Specify](https://til.hashrocket.com/posts/edefa42db2-rspec-specify)
+
+I wanted to be able to put a pry in that line of code and be able to call `key`, or `described_class[key]` or `Pry::Env[key]`.
+
+I'll have to "deconstruct" the `specify` block to get a pry closer to this line of code.
+
+We'll go from this:
+
+```ruby
+specify { expect(described_class[key]).to eq('val') }
+```
+to this:
+
+```ruby
+it "should equal 'val'" do
+  expect(described_class[key]).to eq('val')
+end
+```
+
+I don't have access to `key` here:
+
+![key](/images/2021-02-24 at 11.02 AM.jpg)
+
+But I do have it now, after refactoring from `specify {}` to `it/do`:
+
+![it works](/images/2021-02-24 at 11.06 AM-pry-better.jpg)
+
+## A little digression on ENV, test 1: `when ENV contains the passed key`
+
+Time to learn a little about your `env`, if you've not already. In Pry (or your terminal session), type `ENV` (it's case sensitive)
+
+You'll get a bunch of results back. When I run `ENV.count` I get 87 results. I've had to search through my `ENV` before to find matching results, and I use a little ruby method like so:
+
+```ruby
+ENV.select { |k| k =~ /pry/i }
+```
+
+This selects all my `ENV` entries that have the string `pry` in them, in a case-insensitive way. (that's what the trailing `i` specifies.)
+
+I can see that as the code executes, the first spec should pass. It sets `ENV['PRYTESTKEY']` to `val`, and then asserts that... well, that it did this. Cool. On to test 2.
+
+## test 2: `when ENV doesn't contain the passed key`
+
+By the way, when running the tests like so:
+
+```shell
+rspec spec/env_spec.rb
+```
+
+You can add `:line-number` to the end, and it'll run the spec associated with the `should` block in that line of code. I do this to run tests one-at-a-time:
+
+```shell
+rspec spec/env_spec.rb:17
+```
+So, we're testing ENV behavior when there's no assigned key. 
+
+Instead of `ENV['PRYTESTKEY'] = 'val'` having been run, now we're just calling a bare, non-assigned `env` variable, like `ENV['totallyfake']`
+
+What happens when you call a hash key that doesn't exist? You usually get `nil`, so this test also doesn't really tell us new things:
+
+```ruby
+ENV['PRYTESTKEY']
+=> nil
+```
+
+So this also passes. 
+
+## Test 3: `when ENV contains the passed key but its value is nil`
+
+I converted the `specify` to a `it/do` block, added the pry, and am visually/manually reproducing the assertion:
+
+```ruby
+expect(described_class[key]).to be_nil
+```
+
+In pry:
+
+```ruby
+ENV['PRYTESTKEY'].nil?
+=> false
+```
+Seems like it should fail, but it doesn't. 
+
+Sigh. Here's how `rspec` handles `true`, `false`, `truthy`, `falsey`, and `nil`. This still doesn't adhere to my expectations:
+
+[Truthiness and existentialism (rspec cheatsheet)](https://kapeli.com/cheat_sheets/RSpec_Expectations.docset/Contents/Resources/Documents/index#//dash_ref_Built-in%20Matchers/Entry/Truthiness%20and%20existentialism/0)
+
+Arg. I feel disconent messing with code when the tests don't even fail.
+
+---------------------
+
+AAAAAAH it's because I created the new file in the wrong directory. Once I move `env.rb` to the `lib/pry` directory (or something like that) the tests are failing. Huzzah.
+
+## From the top, take two:
+
+```
+
+```
 
 
 
