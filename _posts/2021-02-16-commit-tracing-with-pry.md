@@ -330,12 +330,125 @@ Arg. I feel disconent messing with code when the tests don't even fail.
 
 AAAAAAH it's because I created the new file in the wrong directory. Once I move `env.rb` to the `lib/pry` directory (or something like that) the tests are failing. Huzzah.
 
-## From the top, take two:
+## From the top, `git reset --hard 17bdfd70`
+
+OK, I deleted the lib code, rebuilt it using the tests. No problem, ended up with a close copy to what was in the PR. It didn't take very long. Enjoyed it.
+
+Now to rebuild the whole thing, _including_ the tests.
+
+I ran `git reset --hard 17bdfd70`, to check out the whole repo to right before this feature that I want to add. 
+
+I added a "shell" of the test file to `spec/env_spec.rb`, like so:
+
+```ruby
+RSpec.describe Pry::Env do
+  describe "#[]" do
+    context "when ENV contains the passed key" do
+      ENV['testkey'] = 'val'
+      it "should equal 'val'" do
+        expect(ENV['testkey']).to eq('val')
+      end
+    end
+  end
+end
+```
+
+and when I was running it, I kept getting `uninitialized constant RSpec` errors. No idea why - I matched what exists in other files, so I did a `bundle exec rspec spec/env_spec.rb`, got the same error. `bundle installed`, re-ran it, and all worked. no idea why.
+
+Now I'm getting `uninitalized constant 'Pry::Env'`, which is reasonable, because... well, I've not added the constant.
+
+So, added:
+
+```ruby
+class Pry
+  module Env
+  end
+end
+```
+
+and the test passes. Upgraded the test to include the 2nd assertion:
+
+```ruby
+RSpec.describe Pry::Env do
+  describe "#[]" do
+    context "when ENV contains the passed key" do
+      ENV['testkey'] = 'val'
+      it "should equal 'val'" do
+        expect(ENV['testkey']).to eq('val')
+      end
+    end
+    
+    context "when ENV does not contain the passed key" do
+      it "should be nil" do
+        expect(ENV['testkey']).to be_nil
+      end
+    end
+  end
+end
+```
+
+And now the `ENV` value is persisting between test runs, so I need to clean it up.
+
+In the `describe` I added:
+
+```ruby
+RSpec.describe Pry::Env do
+  describe "#[]" do
+    after { ENV.delete('testkey') } 
+    # ^^ these deletes the key I'm creating in various tests
+```
+
+Now all the tests pass again. So far so good. The last test case is where the real work happens, I think.
+
+Here's the last test I added:
+
+```ruby
+context "when ENV contains the passed key but its value is '' " do
+  ENV['testkey'] = ''
+  it "should return nil" do
+    expect(ENV['testkey']).to be_nil
+  end
+end
+```
+and the test output:
+
+```shell
+rspec spec/env_spec.rb
+
+Pry::Env
+  #[]
+    when ENV contains the passed key
+      should equal 'val' (FAILED - 1)
+    when ENV does not contain the passed key
+      should be nil
+    when ENV contains the passed key but its value is ''
+      should return nil
+
+Failures:
+
+  1) Pry::Env#[] when ENV contains the passed key should equal 'val'
+     Failure/Error: expect(ENV['testkey']).to eq('val')
+
+       expected: "val"
+            got: ""
+
+       (compared using ==)
+     # ./spec/env_spec.rb:9:in `block (4 levels) in <top (required)>'
+
+Finished in 0.01615 seconds (files took 0.3045 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/env_spec.rb:8 # Pry::Env#[] when ENV contains the passed key should equal 'val'
 
 ```
 
-```
+colorized:
 
+![failure](/images/2021-02-24 at 1.18 PM-failed.jpg)
+
+Lets make it pass.
 
 
 
