@@ -1,12 +1,24 @@
 ---
 layout: post
-title: "Commit Tracing In Pry"
+title: "Commit Tracing In Pry (Part 1)"
 published: true
 date: 2021-02-24 06:00:00 -0700
 description: "Applying Chelsea Troy's Leveling Up Skill of Commit Tracing"
-permalink: /commit-tracing-in-pry
+permalink: /commit-tracing-in-pry-part-1
 image: ""
 ---
+
+## How Done Is This Post?
+
+_Anything I write ranges from "super rough notes-as-i-go, don't even expect full sentences" to "this post is done and proven to deliver what it promises to deliver"_
+
+1. Scratch-pad, take-notes-as-I-go **<-- we are here**
+1. Review post, clean up for first 'share'
+1. I `mkdir` new directory, follow my own steps, clarify
+1. Integrate feedback/answer questions from others
+1. Final cleanup, post is considered `done` unless someone reaches out with further questions
+
+----------------------
 
 I'm working through [Leveling Up Skill #6: Commit Tracing](https://chelseatroy.com/2018/07/21/leveling-up-skill-6-commit-tracing/), as applied to the `pry` gem.
 
