@@ -271,11 +271,438 @@ There's this `caller_locations` thing I need to examine... we'll stick a pry in 
 
 Oh, that reminds me of this `clean_caller` thing I dealt with long ago...
 
-<embed tweet to clean_caller thing>
+<embed tweet to clean_caller thing in pry>
+
+[https://twitter.com/josh_works](https://twitter.com/josh_works)
+
+In my `~/.pryrc`, I have:
+
+```ruby
+Pry.config.commands.command 'caller_clean', 'show call stack with lines mentioning "gem" removed' do |foo|
+  output.puts caller.reject {|l| l.include?('/gems')}.join("\n")
+```
+
+So... I've interacted with the `caller` before. I can use it in pry, and call `caller_clean` and it "cleans up" the output
+
+
+Anyway, I stuck a `pry` in the `Pry::Warning::warn` method, like so:
+
+```ruby
+class Pry
+  module Warning
+    def self.warn(message)
+    
+      require "pry"; binding.pry
+      # 'breaking' the code here is messing with my output
+      msg = "#{__FILE__}:#{__LINE__ + 1}: warning: #{message}"
+      
+      Kernel.warn(msg)
+    end
+  end
+end
+```
+
+This is messing with my test output, since I'm trying to generate a `caller` entry from `warning_spec.rb`. Lets take the pry out of `warning.rb` and move it here:
+
+```ruby
+RSpec.describe Pry::Warning do
+  describe "#warn" do
+    it "prints a warning with file and line" do
+      require "pry"; binding.pry
+      expect(Kernel).to receive(:warn).with(
+        "#{__FILE__}:#{__LINE__ + 2}: warning: foo bar"
+      )
+      described_class.warn('foo bar')
+    end
+  end
+end
+```
+Let's see what `__FILE__` is:
+
+```
+> __FILE__
+=> "(pry)"
+```
+
+Also take a look at `caller`. It reads top-to-bottom, doesn't match up with the desired output as far as I can tell...
+
+Hm. Taking a look at my notes now...
+
+```
+caller_locations(1..1)
+```
+
+Hm. OK, in the pry session, I'm calling (and examining):
+
+```
+caller_locations
+caller_locations(1..1)
+caller_locations(1..1)
+caller_locations.first
+```
+
+So now I'm updating my `warning.rb` to be:
+
+```ruby
+class Pry
+  module Warning
+    def self.warn(message)
+      location = caller_locations.first
+      # __FILE__ and `caller_locations.first` are the same?
+      
+      msg = "#{location}:#{__LINE__ + 1}: warning: #{message}"
+      
+      Kernel.warn(msg)
+    end
+  end
+end
+```
+
+Getting close:
+
+```
+Kernel received :warn with unexpected arguments
+        expected: ("pry/spec/warning_spec.rb:7: warning: foo bar")
+             got: ("pry/spec/warning_spec.rb:7:in `block (3 levels) in <top (required)>':8: warning: foo bar")
+```
+
+So, now the path is correct. Win. I... don't know what to do about the error message, though. 
+
+_glances at notes_
+
+Ah, I guess I should examine `location`and `caller_locations` a bit more in pry...
+
+```ruby
+[4] pry> location = caller_locations.first
+=> "/Users/joshthompson/me/intermediate_ruby_obstacle_course/commit-tracing/pry/lib/pry/pry_instance.rb:370:in `eval'"
+[5] pry> location.class
+=> Thread::Backtrace::Location
+[6] pry>
+```
+
+Oh. So... this `caller_locations` thing _looked_ like an array of strings, but it's actually an array of `Thread::Backtrace::Location` objects.
+
+```ruby
+location.methods
+```
+
+Try calling some of these methods...
+
+![location stuff](/images/2021-02-26 at 4.08 PM-exploring-location-object.jpg)
+
+OK. Now, working this back into the `warning.rb` class, futzing around with adding + 1, + 2, adding/removing the pry from `warning_spec.rb`, in order to evaluate the output:
+
+```ruby
+class Pry
+  module Warning
+    def self.warn(message)
+      location = caller_locations.first
+      # __FILE__ and `caller_locations.first` are the same?
+      path = location.absolute_path
+      lineno = location.lineno
+      
+      msg = "#{path}:#{lineno}: warning: #{message}"
+      
+      Kernel.warn(msg)
+    end
+  end
+end
+```
+
+Here's some of the error messages I was getting on the way:
+
+```
+expected: ("commit-tracing/pry/spec/warning_spec.rb:7: warning: foo bar")
+     got: ("commit-tracing/pry/spec/warning_spec.rb:8: warning: foo bar")
+     
+ expected: ("commit-tracing/pry/spec/warning_spec.rb:7: warning: foo bar")
+      got: ("commit-tracing/pry/spec/warning_spec.rb:9: warning: foo bar")
+```
+
+And with the above code, the test passes!
+
+Woot.
+
+I'm not going to worry about the `ruby 1.9` support `if/else`. `ruby 2.0.0` came out in 2015, and I kinda doubt that people are still running `ruby 1.9`.
+
+I also don't want to do `rvm install ruby 1.9.0`, deal with configuring my machine to run ruby 1.9.
+
+We can see that both of these approaches would work though. I hopped back into pry, called `caller.first.split(':')`, etc. Explore it yourself. I don't know what to make of it.
+
+_delete the code, rebuild it all again_
+
+### Step 4.4: `tdd` your way through this _again_
+
+OK, take a long break. Do it again. Try to not look at your paper this time. I'm not going to need it, I don't think...
+
+A little bit of running the tests, and I'm here:
+
+```ruby
+class Pry
+  module Warning
+    def self.warn(message)
+      caller = caller_locations.first
+      file = caller.absolute_path
+      
+      msg = "#{file} #{message}"
+      
+      Kernel.warn(msg)
+    end
+  end
+end
+```
+
+The output is almost right...
+
+A little more work, and the tests pass, with:
+
+```ruby
+class Pry
+  module Warning
+    def self.warn(message)
+      caller = caller_locations.first
+      file = caller.absolute_path
+      lineno = caller.lineno
+      msg = "#{file}:#{lineno}: warning: #{message}"
+      
+      Kernel.warn(msg)
+    end
+  end
+end
+```
+
+This 2nd rebuild took about... 4 minutes. Maybe 5. Didn't look at my paper once. I'm going to go with this dramatically simplified implementation of this class. 
+
+I re-ran all the tests, and got some failures. Let me add this if/else case and see if they pass...
+
+Nope, still fails. OK, don't know why they, but not worrying about it. 
+
+A little refactor brings us to:
+
+```ruby
+class Pry
+  module Warning
+    def self.warn(message)
+      caller = caller_locations.first
+      file = caller.absolute_path
+      lineno = caller.lineno
+      
+      Kernel.warn("#{file}:#{lineno}: warning: #{message}")
+    end
+  end
+end
+```
+
+I'm content with this. 
+
+## Delete the test, re-write the test and the class
+
+Just like before, select everything in the `warning_spec.rb` and `warning.rb` files, rebuild it, running tests as you go.
+
+_had to look at the page to refresh myself on what to name it_
+
+_got a little farther, still don't have an MVP test, looking at my paper again_
+
+Here's my MVP test, deviated slightly from what was written, but I grok this:
+
+```ruby
+RSpec.describe Pry::Warning do
+  describe "#warn" do
+    it "should get a message" do
+      expect(Kernel).to receive(:warn).with(
+        "blarg"
+      )
+      
+      Pry::Warning.warn('blarg')
+    end
+  end
+end
+```
+
+Run the tests, get things like `no class`, `no method`, and now it passes, like so:
+
+(I am so bad at spelling `Kernel`. `el`, not `al`)
+
+```ruby
+class Pry
+  module Warning
+    def self.warn(message)
+      
+      Kernel.warn(message)
+    end
+  end
+end
+```
+
+Let's make our tests a bit better:
+
+```ruby
+RSpec.describe Pry::Warning do
+  describe "#warn" do
+    it "should get a message" do
+      expect(Kernel).to receive(:warn).with(
+        "#{__FILE__}:#{__LINE__}: warning: blarg"
+      )
+      
+      Pry::Warning.warn('blarg')
+    end
+  end
+end
+```
+
+Now things fail again, so make it pass.
+
+```ruby
+class Pry
+  module Warning
+    def self.warn(message)
+      caller = caller_locations.first
+      file = caller.absolute_path
+      lineno = caller.lineno
+      
+      
+      Kernel.warn("#{file}:#{lineno}: warning: #{message}")
+    end
+  end
+end
+```
+
+OK, now the test fails again:
+
+```
+1) Pry::Warning#warn should get a message
+   Failure/Error: Kernel.warn("#{file}:#{lineno}: warning: #{message}")
+
+     Kernel received :warn with unexpected arguments
+       expected: ("/Users/joshthompson/me/intermediate_ruby_obstacle_course/commit-tracing/pry/spec/warning_spec.rb:5: warning: blarg")
+       got: ("/Users/joshthompson/me/intermediate_ruby_obstacle_course/commit-tracing/pry/spec/warning_spec.rb:8: warning: blarg")
+```
+
+Notice the difference - the line number is wrong. We can see where we're going wrong, look at the line numbers of the spec!
+
+Subtract the 5 from the 8, and that's the expected difference in where the actual `Kernal.warn(message)` message is sent, vs where `__LINE__` is in the file when it's called.
+
+And... you can play around to get it to work:
+
+```ruby
+RSpec.describe Pry::Warning do
+  describe "#warn" do
+    it "should get a message" do
+      expect(Kernel).to receive(:warn).with(
+        "#{__FILE__}:#{__LINE__ + 2}: warning: blarg"
+      )
+      Pry::Warning.warn('blarg')
+    end
+  end
+end
+```
+
+Sick. I rebuilt this test and got it working in not many minutes. Lets try it again, see if I can do it without paper notes.
+
+### Step 4.5: rebuild the test (and the library) a second time
+
+Start fresh again:
+
+Ended up with:
+
+```ruby
+RSpec.describe Pry::Warning do
+  describe "#warn" do
+    it "should return path, line number, message" do
+      expect(Kernel).to receive(:warn).with(
+        "message"
+      )
+      
+      Pry::Warning.warn("message")
+    end
+  end
+end
+```
+
+No notes needed, off to make it pass
+
+30 seconds later, it passes. Lets update the test:
+
+```ruby
+RSpec.describe Pry::Warning do
+  describe "#warn" do
+    it "should return path, line number, message" do
+      expect(Kernel).to receive(:warn).with(
+        "#{__FILE__}:#{__LINE__ + 2}: warning: message"
+      )
+      
+      Pry::Warning.warn("message")
+    end
+  end
+end
+```
+
+Make it pass...
+
+other than forgetting that the method is `absolute_path`, and not `absolute_url`, this was easy.
+
+I did it all with good process, in just three or four minutes. 
+
+## Step 5 Reset the repo to before this commit
+
+You'll end up rebuilding this one more time, should take only 4 minutes, and you'll also get to now make the refactors included in this PR. I'm still avoiding looking at my paper
+
+```
+git stash
+git reset --hard HEAD~
+```
+
+## Step 6 Refactor the existing codebase to use `Pry::Warning::Warn`
+
+So... I'm not sure how to find the files that need refactoring. 
+
+Obviously I've got the names in the PR, but if I were doing this myself, how would I find them? It's likely that this class is going to replace some existing method calls, maybe to `Kernel` directly?
+
+I kinda combined steps 5 and 6 together, sorry for the confusion. 
+
+Now that the repo is reset to before this PR, re-add the test, make it pass, and then lets find the refactoring opportunities...
+
+OK, that took me about 4 minutes to rebuild, completely. I'm feeling comfortable with this now...
+
+For the refactor... I give up. I don't know how I would have found these...
+
+`ctrl-f`-ing the entire repo for:
+
+- `Kernel.warn` (nothing)
+- `warn` (lots of things. 120 results, 30 files)
+- `.warn` (6 results, 4 files. )
+- `warn(` this is the key search wherry to find the refactors?
 
 
 
 ## Checks for Understanding
+
+### From round 1, rebuilding `warning.rb`
+
+- what is `caller`? 
+- what is `__LINE__`? 
+- what is `__FILE__`?
+- what does `caller_locations` look like? What are some of it's methods. 
+- why might you use `caller_locations` instead of `__FILE__` in `Pry::Warning::Warn`
+
+
+OK. I had to study it a bit, the finished PR, and the refactors I was just doing, in order to make each exact change.
+
+I'm now understanding how all these pieces fit together, quite nicely.
+
+I'm going to call it a day here, and I'll come back and repeat this entire PR, from scratch, without looking at my paper or the actual changed code, and I'll see if I can get the whole thing done.
+
+I'll start from:
+
+```
+git reset --hard 473bc9f2d6a0ebd93c9a09ea3c699c14e01330b0~
+git clean --dry-run
+git clean -f
+```
+
+Look up `git clean` (`tldr git clean`) to get a feel for how it works. 
+
+PHEW! Taking a break for a while now.
 
 
 
