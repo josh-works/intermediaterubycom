@@ -81,11 +81,11 @@ git diff HEAD~ --name-only | xargs atom
 
 Now, lets write out the commit on paper. I _think_ I'm going to only write down the _added_ code. TBD if this is the right approach:
 
-<add picture of handwritten code>
+TODO: add picture of handwritten code
 
 OK, 13 min later, here's what I wrote:
 
-<add picture of handwritten code>
+TODO: add picture of handwritten code
 
 ## Step 3: Annotate that hand-written code
 
@@ -271,7 +271,7 @@ There's this `caller_locations` thing I need to examine... we'll stick a pry in 
 
 Oh, that reminds me of this `clean_caller` thing I dealt with long ago...
 
-<embed tweet to clean_caller thing in pry>
+TODO: embed tweet to clean_caller thing in pry
 
 [https://twitter.com/josh_works](https://twitter.com/josh_works)
 
