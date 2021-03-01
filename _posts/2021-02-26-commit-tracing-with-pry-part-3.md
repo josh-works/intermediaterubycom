@@ -81,11 +81,12 @@ git diff HEAD~ --name-only | xargs atom
 
 Now, lets write out the commit on paper. I _think_ I'm going to only write down the _added_ code. TBD if this is the right approach:
 
-TODO: add picture of handwritten code
-
 OK, 13 min later, here's what I wrote:
 
-TODO: add picture of handwritten code
+
+![handwritten code](/images/2021-03-01 at 8.57 AM-commit-tracing-prywarning.jpg)
+
+
 
 ## Step 3: Annotate that hand-written code
 
