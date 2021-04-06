@@ -705,6 +705,11 @@ Look up `git clean` (`tldr git clean`) to get a feel for how it works.
 
 PHEW! Taking a break for a while now.
 
+## Questions
+
+- how does `#warn` work as implemented before the commit?
+- take notes as reading the changes 
+
 
 
 ## Footnotes

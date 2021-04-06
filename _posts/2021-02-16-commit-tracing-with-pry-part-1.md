@@ -462,6 +462,35 @@ colorized:
 
 Lets make it pass.
 
+## Checks for understanding
+
+
+### how to open gem in specific editor 
+
+- How do you open a gem with a specific editor? (`EDITOR=`... )
+
+VS Code: 
+
+`EDITOR=code bundle open pry`
+
+### git stuff
+
+`git checkout`
+
+What's a `commit sha`? 
+
+`git log`
+
+`git log -p`
+
+### How to find file to open to look at tests and code and such?
+
+
+
+
+
+
+
 
 
 ### Notes, further reading
