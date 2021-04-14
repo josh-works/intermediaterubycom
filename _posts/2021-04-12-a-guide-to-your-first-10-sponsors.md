@@ -31,22 +31,22 @@ Here's what we're going to do:
 1. How to get sponsors 2-5
 1. How to get sponsors 5-10
 
-# How to set up github sponsors
+## How to set up github sponsors
 
 1. Head to [https://github.com/sponsors](https://github.com/sponsors) and click `Get Sponsored`
 
-# How to write your product tiers
+## How to write your product tiers
 
 1. When you get the setting of choosing to display `dollars per month of income` or `total numbers of sponsors`, choose the former.
 1. When you are choosing tiers, I recommend having at minimum three tiers: `very small`, `small`, and `medium`. ($1-2, ~$15, $100, respectively). Feel free to base your copy off my tiers, or copy-paste from mine: [https://github.com/sponsors/josh-works](https://github.com/sponsors/josh-works).
 
-# How to get your first sponsor
+## How to get your first sponsor
 
 If you're following this guide, PLEASE LET ME KNOW WHEN YOU HAVE YOUR SPONSORSHIP ACCOUNT SET UP! I'd be honored to be your first sponsor. (This is why a small minimum tier matters. At $1 or $2/month, I can sponsor a nearly unlimited number of people. At $50/mo, I cannot sponsor very many people.)
 
 Now you have your first sponsor. It'll be me, unless you send it to a friend first, and then I'll be your second.
 
-# How to get sponsors 2-5
+## How to get sponsors 2-5
 
 Once you have your first sponsor (or before then) create a new email to a few people that know you well, and who are "in your corner". Say something like:
 
@@ -74,7 +74,7 @@ Sales (that's what this is, by the way. Sales) is really hard. I've _done_ sales
 
 I was able to get sponsorships from people I reached out to, because I've got strong friendships with these people. Every sponsor I have, I know exceedingly well. They're in my corner. 
 
-## Sponsors 6-10
+## How to get Sponsors 6-10
 
 Rinse and repeat. Once you have five sponsors, go get another 5. 
 
@@ -85,6 +85,8 @@ I got a few sponsorships at the $1/mo level, and a few at the $14/mo level. The 
 ## Corporate Sponsors
 
 Once you've got ten sponsors, it's time to start thinking about _corporate_ sponsorships. Those are (in my mind) any amount above $100/mo. 
+
+They don't have to come from corporations, per se, but the _use case_ you should target is "solve business problems". 
 
 I think a lot about $100/mo expenses that I spend money on. $100 is meaningful money to me. It's irrelevant to companies, so you're going to have to think differently about landing larger sponsors than the small ones.
 
