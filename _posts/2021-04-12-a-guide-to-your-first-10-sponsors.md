@@ -23,7 +23,7 @@ I think most software developers (myself included), despite all of their trainin
 
 So, you've got technical skills. If you don't think you do, you're wrong, and you do. More on that at another point in time.
 
-Here's what we're going to do:
+Here's what we're going to talk about:
 
 1. How to set up your github sponsors account
 1. Talk about how to write your product tiers
@@ -56,7 +56,7 @@ Once you have your first sponsor (or before then) create a new email to a few pe
 >
 > You, the recipient of this email, know me, and you want me to be successful. I'm asking a favor that's a little uncomfortable. Will you sponsor me at $1/mo? You showing this public support will help me get after the larger/"corporate" sponsors I'm aiming for.
 > 
-> To sponsor me, head here: https://github.com/sponsors/your-github-username
+> To sponsor me, head here: [https://github.com/sponsors/your-github-username](https://github.com/sponsors/your-github-username)
 > 
 > It'll cost $1/mo. It'll mean so much more to me than $1/month. 
 > 
