@@ -7,6 +7,7 @@ published: true
 categories: [programming]
 tags: [ruby, rails, sidekiq, background_jobs]
 permalink: sidekiq-and-background-jobs-in-rails-for-beginners
+issue_id: 5
 ---
 
 _**Author's note**: I originally wrote this post back in 2018, on [josh.works](https://josh.works/sidekiq-and-background-jobs-in-rails-for-beginners). I'm bringing it to intermediateruby.com because it's rather germane to the purposes of this site. It is also [cross-posted to Medium](https://medium.com/@josh_works/sidekiq-and-background-jobs-for-beginners-89c95fef786f)._

@@ -9,6 +9,7 @@ tags: [tag1, tag2]
 permalink: this-post-url
 image: /images/title_image.jpg
 ---
+github_issue_id: 0
 
 ## How Done Is This Post?
 

@@ -22,6 +22,7 @@ tagline:             "Deliver More Value"
 title_image:         "/images/site_base_image.jpg"
 url:                 https://intermediateruby.com/
 baseurl:             ""
+issues_repo:         josh-works/intermediate-ruby
 
 # paginate:            5
 excerpt_separator:   <!--more-->
@@ -48,6 +49,7 @@ author:
   name:              Josh Thompson
   url:               https://twitter.com/josh_works
   email:             joshthompson@hey.com
+  github_username:   'josh-works'
 
 # Custom vars
 github:
