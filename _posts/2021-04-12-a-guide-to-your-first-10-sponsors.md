@@ -6,7 +6,7 @@ date: 2021-04-12 06:00:00 -0700
 description: ""
 permalink: /a-guide-to-your-first-ten-sponsors
 image: ""
-issue: 3
+issue_id: 3
 ---
 
 _Epistemic Status: Draft, very work-in-progress. Notes for myself and others. YMMV. I'm writing this in an attempt to capture information while it's fresh on my mind. There's a lot of opinion in here, and I don't have time to add the great deal of qualifying statements I would normally add, so please accept this as a general disclaimer._
