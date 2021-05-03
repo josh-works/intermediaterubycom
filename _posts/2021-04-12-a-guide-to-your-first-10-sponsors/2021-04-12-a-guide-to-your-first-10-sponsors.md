@@ -11,7 +11,7 @@ issue_id: 3
 
 _**Epistemic Status:** Draft, work-in-progress. Notes for myself and others. I'm writing this in an attempt to capture information while it's fresh on my mind. There's a lot of opinion in here, and I don't have time to add the great deal of qualifying statements I would normally add, so please accept this as a general disclaimer._
 
-I set up my [Github Sponsors page](https://github.com/sponsors/josh-works) a few weeks ago. March 8th, it looks like, according to some emails I sent. I'm writing these words April 14th, when I'm at 21 sponsors and ~$1300 in monthly sponsorship.
+I set up my [GitHub Sponsors page](https://github.com/sponsors/josh-works) a few weeks ago. March 8th, it looks like, according to some emails I sent. I'm writing these words April 14th, when I'm at 21 sponsors and ~$1300 in monthly sponsorship.
 
 I feel like I got pretty lucky with the $1000 sponsorship. It's very bespoke and specific. For the purposes of this guide, lets aim for a few hundred dollars/mo from small sponsorships. (between $1 and $150/mo)
 
@@ -28,13 +28,13 @@ This post isn't about resolving the first item. Hopefully you realize that you'v
 
 Lets unpack number 2. Here's what we're going to talk about:
 
-1. How to set up your Github sponsors account
+1. How to set up your GitHub sponsors account
 1. Talk about how to write your product tiers
 1. How to get your first sponsor
 1. How to get sponsors 2-5
 1. How to get sponsors 6-10
 
-## How to set up Github sponsors
+## How to set up GitHub sponsors
 
 1. Head to [https://github.com/sponsors](https://github.com/sponsors) and click `Get Sponsored`
 
@@ -58,7 +58,7 @@ Now you have your first sponsor. It'll be me, unless you send it to a friend fir
 
 Once you have your first sponsor (or before then) create a new email to a few people that know you well, and who are "in your corner". Say something like:
 
-> Hi there! I'm working on making money via open-source contributions on Github Sponsors. My primary goal is to deliver so much value to some people that it makes sense for them to pay me hundreds of dollars.
+> Hi there! I'm working on making money via open-source contributions on GitHub Sponsors. My primary goal is to deliver so much value to some people that it makes sense for them to pay me hundreds of dollars.
 > 
 > To do that, I need some public evidence of competence and support. A sponsors page with only one or two sponsors is kinda... sad. It's like a big room thats empty. It doesn't look right.
 >
@@ -96,7 +96,7 @@ I was not being duplicitous. I truly wanted their eyes on the copy. But a down-s
 
 ### 3rd sponsor
 
-![3rd sponsor](/assets/2021-05-03 at 4.00 PM.jpg)
+![3rd sponsor](/assets/2021-05-03 at 4.23 PM.jpg)
 
 ### 4th sponsor
 
