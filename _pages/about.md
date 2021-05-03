@@ -25,6 +25,10 @@ It means I am trying to figure out, in a very specific, practical way, how to he
 
 I work across a range of projects to facilitate these goals, like obstacle courses, blog posts, video walk-throughs, and stand-alone "tiny projects"
 
+Most of this work lives on GitHub, and I'd encourage you to head over to my [GitHub Sponsors Profile](https://github.com/sponsors/josh-works), pick a tier that feels right, sign up, and we'll go from there.
+
+All sponsors get an invite to the `intermediateruby` Slack group, which means they get easier access to me, and we'll collaborate on how I can help move you in the directions you want to go. 
+
 
 ## Obstacle Courses
 
@@ -41,7 +45,7 @@ I've got some small stand-alone web apps deployed to Heroku. Here's a list of so
 
 I wanted to scrape a page of hacker news comments for any user-submitted blogs. It's a Sinatra application running on Heroku. [Here's the git repo](https://github.com/josh-works/ruby_web_scraping)
 
-# Quotes On The Value of Pursuing These Skills
+# Quotes On The Value of Pursuing Growth of your Skills
 
 I was speaking with a former VP of Engineering at a successful software company, asking about how his team handled skills, improving their abilities, career development, etc.
 
@@ -67,11 +71,7 @@ I care, _deeply_, about my craft. I am also really good at helping other people 
 
 I'll help you accomplish all this and more. 
 
-I'm spinning up coaching services. $300 for two calls, two weeks apart. 
+Start here: 
 
-The first one will be planning, the second call will be checking in on how those plans played out.
-
-I charge handsomely for this service, but I don't want _your_ money, I want _your company's money_. I'm going to help you deliver an extra $20-200k/yr in value to your company, so please book with a company credit card, or at least expense the call.
-
-Book and pay here: [calendly.com/joshthompson/coaching-session-kickoff](https://calendly.com/joshthompson/coaching-session-kickoff)
+👉 [github.com/sponsors/josh-works](https://github.com/sponsors/josh-works)
 

@@ -4,28 +4,22 @@ title: Home
 ---
 
 ## Questions for you
+- 👉 Have you read (or felt guilt about not reading) _Practical Object-Oriented Design in Ruby_ by Sandi Metz?
+- 👉 Have you read [Refactoring: Ruby Edition](https://www.amazon.com/Refactoring-Ruby-Addison-Wesley-Professional-dp-0321984137/dp/0321984137/ref=mt_paperback?_encoding=UTF8&me=&qid=) by Jay Fields, or it's predecessor and Java-focused [Refactoring: Improving the Design of Existing Code](https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Signature/dp/0134757599)?
+- 👉 Have you paid Avdi Grimm for any of his amazing [Ruby Tapas](https://www.rubytapas.com/) screencasts or his [Mastering the Object-Oriented Mindset in Ruby and Rails](https://avdi.codes/courses/moom/) course?
+- 👉 Do you consider yourself to be an early-career software developer?
+- 👉 Do you work in Ruby and/or Rails? 
+- 👉 Do you pair as much as you can with senior developers?
 
-👉 Have you read (or felt guilt about not reading) _Practical Object-Oriented Design in Ruby_ by Sandi Metz?
+Even with all of the existing resources out there, _do you still feel a bit stuck?_ 
 
-👉 Have you read _Refactoring: Ruby Edition_ by Jay Fields, or it's predecessor and Java-focused _Refactoring: Improving the Design of Existing Code_
-
-👉 Have you paid Avdi Grimm for any of his amazing [Ruby Tapas](https://www.rubytapas.com/) screencasts or his [Mastering the Object-Oriented Mindset in Ruby and Rails](https://avdi.codes/courses/moom/) course?
-
-👉 Do you consider yourself to be an early-career software developer?
-
-👉 Do you work in Ruby and/or Rails? 
-
-👉 Do you pair as much as you can with senior developers?
-
-👉 Even with all of the existing resources out there, _do you still feel a bit stuck?_ 
-
-**I feel your pain, and I can help through this stage in your career.**
+**I feel your pain, and I can help through this stage in your career**
 
 I'm Josh. I'm on a quest to figure out how to most effectively help early-career software developers most quickly become "mid-career" software developers. I got my first software development job in 2017, and spent a long time feeling frustrated about my pace of growth while on the job.
 
 Fast-forward to 2020, I've certainly grown into a solid developer, but I feel like I still have holes in my knowledge, and I should know more than I do, with my four years in the industry. 
 
-**I will help you gain the experience of my four years in way, way less time than it took me.** 
+**I will help you gain the experience of my four years in way, way less time than it took me** 
 
 Many, many other software developers who are in their first job have told me they also felt frustrated with their pace of learning and growth. 
 
@@ -34,8 +28,6 @@ So, how do we fix this problem? How do we learn more, in order to build better s
 I'll unpack each of these answers below. For now, just know that I'll help you fix the problem, I'll help you learn "meta-skills" along the way, and you'll understand why this learning you'll do is deeply important to you, your employer, and any future employer down the road. 
 
 You'll be less frustrated, more satisfied, more respected, more patient, and your career trajectory will be fundamentally changed.
-
---------------------
 
 So, how do we do all of this?
 
@@ -65,10 +57,6 @@ _\- [@Cedric Chin](https://mobile.twitter.com/ejames_c)_
 _\- Jordan Beck_
 
 
-
-
-------------------------------
-
 ## Begin Your Journey
 
 I've got a few different resources, and this entire curriculum is under rapid development. The easiest way to follow along is with your email address:
@@ -77,4 +65,4 @@ I've got a few different resources, and this entire curriculum is under rapid de
 
 I'll start introducing resources like my [Intermediate Ruby Obstacle Course](https://github.com/josh-works/intermediate_ruby_obstacle_course) and [Pairing on Open Source Software: Bugfixing with Matt Swanson](https://intermediateruby.com/make-oss-contributions-part-0-introduction)
 
-Oh, and once you punch in your email address, I'll send you some questions. I promise it'll be worth your time, and it's efforless to unsubscribe. (I will in fact strongly request you unsubscribe, a few emails down the road.)
+Oh, and once you punch in your email address, I'll send you some questions. I promise it'll be worth your time, and it's effortless to unsubscribe. 
