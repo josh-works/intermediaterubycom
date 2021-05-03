@@ -376,6 +376,11 @@ In the process of working through this lesson, I found a [Stack Overflow post](h
 
 Anyway, I'm content that I understand the basic difference between `Worker.perform_async` and `Worker.new.perform`, and next time I encounter an issue like this, I'll much more quickly wrap my head around it.
 
+I will be writing more resources like what you just read! Want to keep learning more about Ruby, Rails, and software development? Subscribe below:
+
+{% include newsletter.html %}
+
+
 ## Resources 
 
  - [Turing Sidekiq lesson](https://github.com/turingschool/backend-curriculum-site/blob/gh-pages/module3/archive/lessons/background_workers.md)
