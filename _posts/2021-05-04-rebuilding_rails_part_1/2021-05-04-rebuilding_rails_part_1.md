@@ -25,7 +25,6 @@ I'm working through this course a week or two after a friend started it, and I w
 
 I bought the course, read the introduction, and skimmed the first few chapters, and the last chapter. I've been working in Ruby and Rails for a while, so I didn't need to do anything from a "setup" perspective.
 
-I like to race through a chapter as quick as possible, then re-do it a second time, slower, more intentionally. I always do the exercises, because thats where the learning comes from, and with exercises I do the same thing - I go the first time quickly and/or reach for answers/hints quickly, and then repeat them.
 
 ------------------
 
