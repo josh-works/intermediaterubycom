@@ -8,7 +8,7 @@ categories: [course_notes, tutorial_walkthrough, rebuilding_rails]
 tags: [rails, rebuilding_rails, tutorial_walkthrough]
 permalink: rebuilding-rails-course-walkthrough-part-1
 image: /images/title_image.jpg
-issue_id: 
+issue_id: 6
 ---
 
 ## Rebuilding Rails Course Notes
