@@ -310,3 +310,36 @@ Evidence that it succeeds:
 
 ### Exercise 3: Test Early, Test Often
 
+I added `rack-test` and `minitest` to the `rulers.gemspec` file as a `development_dependency`. 
+
+I then noticed I already had a `test` directory with a `test_helper` inside of it, containing everything the tutorial wanted me to add. I think this is what I get by specifying "minitest" in the interactive `gem new NAME` command process.
+
+The `$LOAD_PATH` is familiar to me, assuming it's at all related to my Linux/Mac's `$PATH`. 
+
+the `__dir__` is probably related to `__FILE__` and `__LINE__`, which I've encountered doing some [commit tracing with the Pry gem](https://www.intermediateruby.com/commit-tracing-in-pry-part-3#step-43-tdd-your-way-through-this-as-best-as-you-can) and [trying to implement the principles of deliberate practice with Avdi Grimm and the Rake gem](https://josh.works/deliberate-practice-avdi-grimm-rake-gem). 
+
+OK, I'm not going to add more tests, even though I'm suggested that I do.
+
+[this gist](https://gist.github.com/JoshCheek/989a099594059ebf3015) by Josh Cheek is great! Tons of potential. I'll upgrade my testing some day.
+
+Current commit: https://github.com/josh-works/rulers/commit/d562747261bcf1f94af5b4e5de2bc73344576582
+
+### Exercise 4: Other Application Servers
+
+```
+gem install unicorn
+unicorn config.ru
+```
+
+Unicorn serves on localhost:8080 by default, but you can override to 3001 w/ `unicorn -p 3001`. This exercise was... easy.
+
+### Exercise 5: Ignoring Files
+
+Ah, he recommends doing what I'd suspected I should do earlier - .gitignore the compiled versions of the gem.
+
+A one-line addition to the `.gitignore`:
+
+https://github.com/josh-works/rulers/commit/cf9e1d295da17bdecf34ba45322bbc5780ba6287
+
+And this concludes chapter 1.
+
