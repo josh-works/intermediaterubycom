@@ -322,7 +322,7 @@ OK, I'm not going to add more tests, even though I'm suggested that I do.
 
 [this gist](https://gist.github.com/JoshCheek/989a099594059ebf3015) by Josh Cheek is great! Tons of potential. I'll upgrade my testing some day.
 
-Current commit: https://github.com/josh-works/rulers/commit/d562747261bcf1f94af5b4e5de2bc73344576582
+Current commit: [https://github.com/josh-works/rulers/commit/d562747261bcf1f94af5b4e5de2bc73344576582](https://github.com/josh-works/rulers/commit/d562747261bcf1f94af5b4e5de2bc73344576582)
 
 ### Exercise 4: Other Application Servers
 
@@ -339,7 +339,8 @@ Ah, he recommends doing what I'd suspected I should do earlier - .gitignore the 
 
 A one-line addition to the `.gitignore`:
 
-https://github.com/josh-works/rulers/commit/cf9e1d295da17bdecf34ba45322bbc5780ba6287
-
+[https://github.com/josh-works/rulers/commit/cf9e1d295da17bdecf34ba45322bbc5780ba6287
+](https://github.com/josh-works/rulers/commit/cf9e1d295da17bdecf34ba45322bbc5780ba6287
+)
 And this concludes chapter 1.
 
