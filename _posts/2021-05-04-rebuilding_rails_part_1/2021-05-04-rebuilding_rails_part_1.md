@@ -343,3 +343,108 @@ A one-line addition to the `.gitignore`:
 )
 And this concludes chapter 1.
 
+## Chapter 2: Your First Controller
+
+This went pretty smoothly, until I tried to run the changes to my `best_quotes` app.
+
+I spent a little while on this error:
+
+![Uninitialized Constant](/images/2021-05-05 at 6.06 PM.jpg)
+
+I poked around for a little bit, confirmed that I'd named things correctly, couldn't figure it out.
+
+I eventually had to pull up the [Chapter 2 commit](https://github.com/noahgibbs/rulers/commit/cb3f322f0425baca0d09baecc9579ee56c57ceab) from Noah Gibb's implementation of this project, and I found the problem.
+
+In `lib/rulers.rb`, I forgot to `require` my new routing file.
+
+Fixed that, and we were off to the races!
+
+Also, I'm following along with Ben Orenstein's "Improve your code quality" challenge. Today's challenge was [get rid of a warning you're used to ignoring](https://forum.codequalitychallenge.com/t/day-3-get-rid-of-a-warning/1125).
+
+These warnings seemed like good candidates: 
+
+![bad warnings](/images/2021-05-05 at 6.10 PM.jpg)
+
+So I `gem list`'ed the offending gems, picked ~a version at random~ the newest gem version, and [added it to my `Gemspec`]. Now when I `gem build rulers.gemspec` the output is nice and clean:
+
+![no warnings](/images/2021-05-05 at 6.12 PM.jpg)
+
+[9e730b9](https://github.com/josh-works/rulers/commit/9e730b9792aa745dc4d702fbd36ac7036894033b)
+
+
+UGH, stuff is still broken. 
+
+```
+> gem build rulers-0.0.2.gem
+Invalid gemspec in [rulers-0.0.2.gem]: undefined local variable or method `metadata' for Gem::Specification:Class
+ERROR:  Error loading gemspec. Aborting.
+```
+
+### Gotcha: Update the `best_quotes` `Gemfile.lock` to source the `0.0.2` version of `rulers`
+
+
+Ah, here's the problem - I combed through the commit on the `rulers` gem for chapter 2, couldn't see my problem. I looked at the [chapter 2 commit for `best_quotes`](https://github.com/noahgibbs/best_quotes/commit/d50f8a983cb67176978a02b6fa1f1ac0d4c637b5), and found the issue:
+
+```diff
+diff --git a/Gemfile.lock b/Gemfile.lock
+index d5880f6..81087d4 100644
+--- a/Gemfile.lock
++++ b/Gemfile.lock
+@@ -2,7 +2,7 @@ GEM
+   remote: https://rubygems.org/
+   specs:
+     rack (2.2.3)
+-    rulers (0.0.1)
++    rulers (0.0.2)
+       rack
+
+```
+
+you can manually increment the value, or run `bundle update rulers`. 
+
+Noah mentioned this at the beginning of the chapter. He said:
+
+> You may also need to "bundle update rulers" in best_quotes.
+
+This didn't land when I read it the first time, but I'm seeing it now. 
+
+I'm making progress...
+
+Now I'm getting more errors. Le sigh. When I visit `localhost:3001`, I get:
+
+```
+NameError at /
+uninitialized constant Controller
+```
+
+`localhost:3001/hi`:
+
+```
+NameError at /hi
+uninitialized constant HiController
+```
+
+So, something is wrong, obviously. What?
+
+...
+
+### Gotcha: Visit `http://localhost:3001/quotes/a_quote`, not `http://localhost:3001/`
+
+Oh boy. I simply forgot to visit the intended URL. Wow. 
+
+I'd been running `rackup -p 3001`, and then visiting `localhost:3001`, expecting to see... well, not an error. 
+
+But for this to work, I needed to visit http://localhost:3001/quotes/a_quote, which Noah mentioned in his book. 
+
+So, nothing was broken. That was a lot of combing through code, trying to diff my code and his, and not understanding why it wasn't working. 
+
+Well, now I know.
+
+Noah even called this out explicitely. I wish I wasn't so bad at reading:
+
+> If you didn’t quite get it, please make sure to include “quotes/ a_quote” in the URL, like you see above -- just going to the root no longer works. If you see "Uninitialised constant Controller" then your URL is probably off.
+
+Now I'm playing around with trying to get the tests to work, so I can stick a `pry` in various spots and see how this is all wired together.
+
+Phew. Chapter 2, going slowly. 
+
