@@ -460,7 +460,7 @@ CGI keeps getting used - it stands for `Common Gateway Interface`: [https://en.w
 
 ### Adding a (temporarily functioning) test for the sake of exploration
 
-~I didn't get a ton out of this chapter - I cannot figure out a good way to stick a `pry` in the key Gem methods and explore state by running tests.~
+<strike>I didn't get a ton out of this chapter - I cannot figure out a good way to stick a `pry` in the key Gem methods and explore state by running tests.</strike>
 
 In Noah's Slack group, in the `#rebuilding_rails` channel, I asked for help stubbing out a tiny test, so I could stick a `pry` in various places, and play around with the responses.
 
