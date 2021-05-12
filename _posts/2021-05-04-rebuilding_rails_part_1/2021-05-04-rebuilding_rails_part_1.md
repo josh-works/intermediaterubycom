@@ -440,7 +440,7 @@ So, nothing was broken. That was a lot of combing through code, trying to diff m
 
 Well, now I know.
 
-Noah even called this out explicitely. I wish I wasn't so bad at reading:
+Noah even called this out explicitly. I wish I wasn't so bad at reading:
 
 > If you didn’t quite get it, please make sure to include “quotes/ a_quote” in the URL, like you see above -- just going to the root no longer works. If you see "Uninitialised constant Controller" then your URL is probably off.
 
@@ -448,3 +448,112 @@ Now I'm playing around with trying to get the tests to work, so I can stick a `p
 
 Phew. Chapter 2, going slowly. 
 
+FWIW, as expected, if you stick a `require 'pry'; binding.pry` in the gem and "hit it from `best_quotes`, it doesn't dump you into a Pry session, just throws an error.
+
+### Gotcha: Dead link for `rubyforge.org`
+
+There's some missing links, like:
+
+[rack.rubyforge.org/doc/SPEC.html](rack.rubyforge.org/doc/SPEC.html), so here's the Wayback Machine version: [https://web.archive.org/web/20170328021208/rack.rubyforge.org/doc/SPEC.html](https://web.archive.org/web/20170328021208/rack.rubyforge.org/doc/SPEC.html)
+
+CGI keeps getting used - it stands for `Common Gateway Interface`: [https://en.wikipedia.org/wiki/Common_Gateway_Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface)
+
+### Chapter 2 summary
+
+I didn't get a ton out of this chapter - I cannot figure out a good way to stick a `pry` in the key Gem methods and explore state by running tests.
+
+In Noah's Slack group, in the `#rebuilding_rails` channel, I asked for help stubbing out a tiny test, so I could stick a `pry` in various places, and play around with the responses.
+
+Noah delivered! First, he opened with a warning - this app isn't TDD-able, if I try to add tests, they'll stop working fairly regularly as the library code changes.
+
+That's fine with me! I just, again, wanted to stick a pry in:
+
+```ruby
+module Rulers
+  class Application
+    def get_controller_and_action(env)
+      require "pry"; binding.pry
+      _, cont, action, after = env["PATH_INFO"].split('/', 4)
+      cont = cont.capitalize
+      cont += "Controller"
+      
+      [Object.const_get(cont), action]
+    end
+  end
+end
+```
+
+I wanted to explore that `Object.const_get` call. 
+
+It sets me up to better understand:
+
+```ruby
+module Rulers
+  class Application
+    def call(env)      
+      if ENV['PATH_INFO'] == '/favicon.ico'
+        return [404,
+          {'Content-Type' => 'text/html'}, []]
+      end
+      
+      require "pry"; binding.pry
+      
+      klass, act = get_controller_and_action(env)
+      controller = klass.new(env)
+      text = controller.send(act)
+      [200, {'Content-Type' => 'text/html'},
+        [text]]
+    end
+  end
+```
+
+So, here's what he recommended. It isn't _that_ complicated, though I certainly wouldn't have figured this out on my own:
+
+```diff
+diff --git a/test/application_test.rb b/test/application_test.rb
+index 635e165..fe218c4 100644
+--- a/test/application_test.rb
++++ b/test/application_test.rb
+@@ -3,6 +3,11 @@
+ # will be helpful eventually
+ class TestApp < Rulers::Application
+ end
++class TestController < Rulers::Controller
++  def myaction
++    "Hello"
++  end
++end
+
+ class RulersAppTest < Minitest::Test
+   include Rack::Test::Methods
+@@ -12,7 +17,7 @@ def app
+   end
+
+   def test_request
+-    get "/"
++    get "/test/myaction"
+
+     assert last_response.ok?
+     body = last_response.body
+```
+
+Great! No stick a `pry` in, perhaps at the top of the following methods:
+
+- `Rulers::Application#call`
+- `Rulers::Application#get_controller_and_action`
+
+_Now that I type these class/methods, I'm not sure why there's in different files. They're both Modules by the title `Rulers`, in the `Application` class. ¯\\\_(ツ)_\/¯_
+
+Run the tests with:
+
+```
+$ ruby test/application_test.rb
+```
+
+And you're off to the races!
+
+Go ahead and explore all the code that we added. It makes _so much more sense_ now, with me playing with it in a `pry` session, than it did with me just reading it. Maybe I'll get over this "need" as I grow as a developer (🤞), but I still cannot just _read_ the code and walk away feeling like I know what it's doing.
+
+I played around with the pry session for 10 minutes, exploring the order by which the code is being called, lots is making sense. Phew. 
+
+## Chapter 3: Rails Automatic Loading
