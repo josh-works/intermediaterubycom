@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Rebuilding Rails, Part 1"
-description: "I take detailed notes, nearly all the time"
-date:  DATE 06:00:00 -0700
+title:  "My walk-through of Noah Gibbs' Rebuilding Rails Course"
+description: "I take detailed notes, nearly all the time. This is no exception."
+date:  2021-05-06 06:00:00 -0700
 crosspost_to_medium: false
 categories: [course_notes, tutorial_walkthrough, rebuilding_rails]
 tags: [rails, rebuilding_rails, tutorial_walkthrough]
@@ -546,7 +546,7 @@ Great! No stick a `pry` in, perhaps at the top of the following methods:
 - `Rulers::Application#call`
 - `Rulers::Application#get_controller_and_action`
 
-_Now that I type these class/methods, I'm not sure why there's in different files. They're both Modules by the title `Rulers`, in the `Application` class. ¯\\\_(ツ)_\/¯_
+_Now that I type these class/methods, I'm not sure why there's in different files. They're both Modules by the title `Rulers`, in the `Application` class. ¯\\\_(ツ)\_\/¯_
 
 Run the tests with:
 
