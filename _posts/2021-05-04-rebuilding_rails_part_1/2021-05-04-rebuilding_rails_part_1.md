@@ -458,13 +458,17 @@ There's some missing links, like:
 
 CGI keeps getting used - it stands for `Common Gateway Interface`: [https://en.wikipedia.org/wiki/Common_Gateway_Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface)
 
-### Chapter 2 summary
+### Adding a (temporarily functioning) test for the sake of exploration
 
-I didn't get a ton out of this chapter - I cannot figure out a good way to stick a `pry` in the key Gem methods and explore state by running tests.
+~I didn't get a ton out of this chapter - I cannot figure out a good way to stick a `pry` in the key Gem methods and explore state by running tests.~
 
 In Noah's Slack group, in the `#rebuilding_rails` channel, I asked for help stubbing out a tiny test, so I could stick a `pry` in various places, and play around with the responses.
 
-Noah delivered! First, he opened with a warning - this app isn't TDD-able, if I try to add tests, they'll stop working fairly regularly as the library code changes.
+Noah delivered! First, he opened with a warning - this app isn't TDD-able, if I try to add tests, they'll stop working fairly regularly as the library code changes:
+
+> But you are going to need to update your code as you change features in the framework. There’s not really a way around it.
+>
+> To put it another way: there should not be an answer to the question, “yeah, but how do I build my tests so that they succeed no matter how I change the functionality of the framework?” :slightly_smiling_face:
 
 That's fine with me! I just, again, wanted to stick a pry in:
 
@@ -472,7 +476,7 @@ That's fine with me! I just, again, wanted to stick a pry in:
 module Rulers
   class Application
     def get_controller_and_action(env)
-      require "pry"; binding.pry
+      require "pry"; binding.pry  # explore!
       _, cont, action, after = env["PATH_INFO"].split('/', 4)
       cont = cont.capitalize
       cont += "Controller"
@@ -496,7 +500,7 @@ module Rulers
           {'Content-Type' => 'text/html'}, []]
       end
       
-      require "pry"; binding.pry
+      require "pry"; binding.pry # explore!
       
       klass, act = get_controller_and_action(env)
       controller = klass.new(env)
