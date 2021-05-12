@@ -554,6 +554,12 @@ And you're off to the races!
 
 Go ahead and explore all the code that we added. It makes _so much more sense_ now, with me playing with it in a `pry` session, than it did with me just reading it. Maybe I'll get over this "need" as I grow as a developer (🤞), but I still cannot just _read_ the code and walk away feeling like I know what it's doing.
 
-I played around with the pry session for 10 minutes, exploring the order by which the code is being called, lots is making sense. Phew. 
+I played around with the pry session for 10 minutes, exploring the order by which the code is being called, lots is making sense. Phew.
+
+This all exists in:
+
+[b59c151](https://github.com/josh-works/rulers/commit/b59c151)
+
+ 
 
 ## Chapter 3: Rails Automatic Loading
