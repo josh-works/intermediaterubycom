@@ -114,11 +114,13 @@ If you want to just buy my time to solve this problem for your organization, I'm
 
 Well, it really could be too good to be true. I'm looking for about five of these, at which point I'll disable to purchase button, and then work on just those 5 apps, then I'll write part 1 of the guide, and iterate for round 2.
 
+
+
 ### What makes for a "good fit" for this service?
 
 - **Your tests are in Ruby/Rails** If you've got a slow Elixir test suite, or whatever, that's not what I'm here to fix. So, I'd like to work on _just_ Ruby and/or Rails test harnesses.
 - **The repository is public _or_ you can add me to the repository while I'm working on your tests.** If you've got a really complicated NDA process, or the words "Would Legal approve of this?" have crossed your mind, it's probably not a good fit.
-- **You're willing to talk with me about it a bit** I might have some questions, and might open up a GitHub issue, or DM you in (Slack|Twitter|Discord|whatever)
+- **You're willing to talk with me about it a bit** I might have some questions, and might open up a GitHub issue, or DM you in Slack|Twitter|Discord|whatever
 - **You're not obsessing too much about this** If you're really nervous about parting with your money and helping me with this experiment, maybe it's not a good fit right now. Once I've iterated on this a few times, it'll be a much more robust service/offering, and _then_ we should talk! Punch your email in below, and you'll get updates as I go!
 
 <script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
