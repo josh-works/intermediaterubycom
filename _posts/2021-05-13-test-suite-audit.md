@@ -157,3 +157,7 @@ Drop your email below, and I'll notify you when this project is done!
 <script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
 
 (Or you can [follow me on Twitter](https://twitter.com/josh_works), or [sponsor me on GitHub](https://github.com/sponsors/josh-works) for between $1 and infinite dollars per month.)
+
+### I've got more questions. What to do?
+
+Leave a comment below. Hit me up on twitter. Email me at `josh@intermediateruby.com`. You know the drill.
