@@ -110,6 +110,10 @@ If you want to just buy my time to solve this problem for your organization, I'm
 
 ## FAQ
 
+### This seems too good to be true. $100 for faster tests?
+
+Well, it really could be too good to be true. I'm looking for about five of these, at which point I'll disable to purchase button, and then work on just those 5 apps, then I'll write part 1 of the guide, and iterate for round 2.
+
 ### What makes for a "good fit" for this service?
 
 - **Your tests are in Ruby/Rails** If you've got a slow Elixir test suite, or whatever, that's not what I'm here to fix. So, I'd like to work on _just_ Ruby and/or Rails test harnesses.
