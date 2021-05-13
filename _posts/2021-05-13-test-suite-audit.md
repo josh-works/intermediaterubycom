@@ -13,6 +13,12 @@ github_issue_id: 7
 
 ## Background
 
+Yesterday (Wednesday, May 12th) I was talking with a very experienced engineer about their test harness, and how (un)happy they were with how long it took the test harness to run.
+
+He suggested I just ask Twitter for their applications, get practice on a lot of different applications. It is a _brilliant_ suggestion. And thus this page was born.
+
+---------------------
+
 I'm a bit of an obsessive about how long it takes to run tests.
 
 Slow tests have such a cost to you, your team, and your company.
@@ -20,6 +26,10 @@ Slow tests have such a cost to you, your team, and your company.
 I've been on teams where the tests take 30 seconds, and I've been on teams where the tests take 45 minutes.
 
 I'm not going to engage in _shaming_ anyone for having a slow test suite. I'd like to simply teach them how to profile/benchmark their own tests, and then make some tactical, selective fixes, and immediately get faster tests!
+
+_Just want to get my `Speed Up Your Tests` guide when it's done? Drop your email below 👇_
+
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
 
 ## What you'll get
 
@@ -100,6 +110,16 @@ If you want to just buy my time to solve this problem for your organization, I'm
 
 ## FAQ
 
+### What makes for a "good fit" for this service?
+
+- **Your tests are in Ruby/Rails** If you've got a slow Elixir test suite, or whatever, that's not what I'm here to fix. So, I'd like to work on _just_ Ruby and/or Rails test harnesses.
+- **The repository is public _or_ you can add me to the repository while I'm working on your tests.** If you've got a really complicated NDA process, or the words "Would Legal approve of this?" have crossed your mind, it's probably not a good fit.
+- **You're willing to talk with me about it a bit** I might have some questions, and might open up a GitHub issue, or DM you in (Slack|Twitter|Discord|whatever)
+- **You're not obsessing too much about this** If you're really nervous about parting with your money and helping me with this experiment, maybe it's not a good fit right now. Once I've iterated on this a few times, it'll be a much more robust service/offering, and _then_ we should talk! Punch your email in below, and you'll get updates as I go!
+
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
+
+
 ### What if you don't make my tests go faster?
 
 I'll give you you're money back!
@@ -121,3 +141,13 @@ I cannot guarantee it, but I can promise that you (and I!) will learn a lot thro
 Great! I'll plan on committing a full week, minimum. Let's set up a quick call to discuss timing, as I don't currently have time to work full-time on a client project. I don't bill by the hour (or the day) but we'd be looking at something north of $4,000. 
 
 Book that roadmapping call here: [calendly.com/joshthompson/roadmapping ($150)](https://calendly.com/joshthompson/roadmapping)
+
+### Can I get that guide you're going to write when it's done?
+
+Absolutely!
+
+Drop your email below, and I'll notify you when this project is done!
+
+<script async data-uid="518bab5f60" src="https://josh-thompson.ck.page/518bab5f60/index.js"></script>
+
+(Or you can [follow me on Twitter](https://twitter.com/josh_works), or [sponsor me on GitHub](https://github.com/sponsors/josh-works) for between $1 and infinite dollars per month.)
