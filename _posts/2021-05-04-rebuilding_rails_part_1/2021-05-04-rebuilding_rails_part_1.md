@@ -533,7 +533,7 @@ So close... The system is trying to read the file, cannot find it. 1%, I think t
 
 ... and we're back. I biked from the table outside where I was working on the above, eventually made it back. Here's the Strava map:
 
-TODO: Add the last Strava trip from 2021-05-15
+[Here's my Strava ride around OCNJ. It was a lovely day](https://www.strava.com/activities/5303842840)
 
 Let's get this error page working...
 
@@ -656,7 +656,7 @@ Great! No stick a `pry` in, perhaps at the top of the following methods:
 - `Rulers::Application#call`
 - `Rulers::Application#get_controller_and_action`
 
-_Now that I type these class/methods, I'm not sure why there's in different files. They're both Modules by the title `Rulers`, in the `Application` class. ¯\\\_(ツ)\_\/¯_
+_Now that I type these class/methods, I'm not sure why there's in different files. They're both Modules by the title `Rulers`, in the `Application` class._ ¯\\\_(ツ)\_/¯
 
 Run the tests with:
 
