@@ -58,7 +58,7 @@ I can't wait to get started!
     id="checkout-button-sku_JTcq1iheI2La2N"
     role="link"
     type="button">
-    Buy Now ($100)
+    Buy Now ($1000)
   </button>
 </div>
 <div id="error-message"></div>
@@ -110,7 +110,7 @@ If you want to just buy my time to solve this problem for your organization, I'm
 
 ## FAQ
 
-### This seems too good to be true. $100 for faster tests?
+### This seems too good to be true. $1000 for faster tests?
 
 Well, it really could be too good to be true. I'm looking for about five of these, at which point I'll disable to purchase button, and then work on just those 5 apps, then I'll write part 1 of the guide, and iterate for round 2.
 
@@ -130,13 +130,17 @@ Well, it really could be too good to be true. I'm looking for about five of thes
 
 I'll give you you're money back!
 
-### $100? Isn't that a little cheap?
+### $1000? Isn't that a little cheap?
 
 It is! I don't quite want to do this for free, but I want to get a lot of exposure to this problem, across different organizations/applications, to see what patterns emerge. I'm doing investing this time, rather than trying to make a lot of money off this. (Though, as I build skills and practice, I'll keep offering this service, at a dramatically increased cost.)
 
-### $100? Isn't that a little expensive?
+### $1000? Isn't that a little expensive?
 
-The average gainfully employed software developer earning $100k/yr earns, effectively, $50/hr. Normally a company would pay 2-3x that rate to bring on a contractor. Since I plan on spending much more than 1 hour on this, I'm basically giving this service away, currently.
+The average gainfully employed software developer costs the company in the ballpark of $1k/workday. Buying this service at such a low cost is the kind of thing that will get you accolades at work by the people who run the place.
+
+If you're not sure you'll get celebrated for hiring me, shoot me a note and I'll help you figure out how to come out of this looking like a hero! 
+
+Tl;Dr; I'm basically giving this service away.
 
 ### I've got a super slow test suite, and I'd love for you to guaranteed that it'll be a lot faster when you're done
 
