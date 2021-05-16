@@ -6,7 +6,7 @@ date:  2021-05-06 06:00:00 -0700
 crosspost_to_medium: false
 categories: [course_notes, tutorial_walkthrough, rebuilding_rails]
 tags: [rails, rebuilding_rails, tutorial_walkthrough]
-permalink: rebuilding-rails-course-walkthrough-part-1
+permalink: rebuilding-rails-course-walkthrough
 image: /images/title_image.jpg
 issue_id: 6
 ---
@@ -458,6 +458,116 @@ There's some missing links, like:
 
 CGI keeps getting used - it stands for `Common Gateway Interface`: [https://en.wikipedia.org/wiki/Common_Gateway_Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface)
 
+
+### Exercise 1: Debugging the Rack environment
+
+This is pretty self-explanatory. In the `best_quotes` app, string interpolate `env` into the browser. 
+
+### Exercise 2: Debugging Exceptions
+
+This is also pretty self-explanatory.
+
+Here's what my diagnostics look like before adding the error handling:
+
+![no help with errors](/images/2021-05-15 at 6.10 PM.jpg)
+
+I tried visiting, successively:
+
+```
+localhost:3001/quotes/a_quote 
+localhost:3001/quotes/a_quotee 
+localhost:3001/quotes/a_quoteee 
+localhost:3001/quotes/no-quote-to-be-had 
+```
+
+Here's our nice error output, once you add the `def exception` update:
+
+![better errors](images/2021-05-15 at 6.19 PM.jpg)
+
+Per Noah's suggestion:
+
+> You should see a prettily-formatted page saying there was a RuntimeError at / quotes/exception. The page should also have a big stack trace.
+> 
+> In chapter 8 we’ll look deeply into Rack middleware and why you’re seeing that. That page isn't built into your browser. **You can turn it off by setting RACK_ENV to production in your environment.** It’s a development-only Rack debugging tool that you’re benefiting from.
+
+I wanted to run `rackup` in `production` mode. I guessed I could add a `ENV=production` on boot, but checked `rackup --help` first to confirm.
+
+Re-running `rackup` with:
+
+```
+$ rackup -p 3001 --env production
+``` 
+
+And we get a generic (and familiar) error page:
+
+![nice error](/images/2021-05-15 at 6.24 PM.jpg)
+
+Lastly, lets try the `begin/end/rescue` suggestion. 
+
+Yep. After rebuilding/re-installing the gem and restarting the server...
+
+![works as expected](/images/2021-05-15 at 6.33 PM.jpg)
+
+Noah says:
+
+> Go into rulers/lib/rulers.rb and in your call method, add a begin/ rescue/end around the controller.send() call. Now you have to decide what to do if an exception is raised -- you can start with a simple error page, or a custom 500 page, or whatever you like. Go to the page again in your browser and make sure you see the page you just added.
+
+I don't actually know _how_ to add "a simple error page". I suspect I'll figure it out as I go forward, and I might come back to this particular exercise and try it out.
+
+If I had to guess (and timebox myself to 5 min of experimenting) I would create `error.html` and then read the file, and pass the output of the file to the `raise` call.
+
+My laptop is at 3% battery, lets see if I can do this.
+
+...
+
+```
+Errno::ENOENT at /quotes/exception
+No such file or directory @ rb_sysopen - ./error.html
+Ruby 	/Users/joshthompson/.rvm/gems/ruby-2.5.8/gems/rulers-0.0.2/lib/rulers.rb: in read, line 19
+Web 	GET localhost/quotes/exception
+```
+
+So close... The system is trying to read the file, cannot find it. 1%, I think this is the way to go, but I'll have to finish it after finding power.
+
+👋
+
+... and we're back. I biked from the table outside where I was working on the above, eventually made it back. Here's the Strava map:
+
+TODO: Add the last Strava trip from 2021-05-15
+
+Let's get this error page working...
+
+As I read through the end of the chapter, I saw:
+
+> Return the contents of a known file -- maybe public/index.html?
+
+So I'm going to move my `error.html` to `public/error.html`. Maybe it'll be accessible then.
+
+Oh, by the way, with the testing I've added below, I can now add a `pry` to my `begin/rescue/end` block, and update my test to as follows:
+
+```ruby
+# test/application_test.rb
+def test_error
+  get "/test/invalid"
+  
+  assert last_response.ok?
+end
+```
+
+And when I run it, I hit the `pry`. 
+
+Hm. I kicked another question into the `software-technique.slack.com` group, I'll update this page when I get a response. 
+
+### Gotcha: `Address already in use - bind(2) for 127.0.0.1:3001 (Errno::EADDRINUSE)`
+
+I almost didn't mention this, but if you lose your terminal window while Rack is still running, and try to restart it, you'll get the above error message.
+
+use `lsof -i :PORT_IN_QUESTION` and it'll show the details of the process using that port. 
+
+You can then use `kill <PID>` to kill the running process, and _now_ you can restart `rack`
+
+
+
 ### Adding a (temporarily functioning) test for the sake of exploration
 
 <strike>I didn't get a ton out of this chapter - I cannot figure out a good way to stick a `pry` in the key Gem methods and explore state by running tests.</strike>
@@ -562,8 +672,6 @@ I played around with the pry session for 10 minutes, exploring the order by whic
 
 This all exists in:
 
-[b59c151](https://github.com/josh-works/rulers/commit/b59c151)
-
- 
+[b59c151](https://github.com/josh-works/rulers/commit/b59c151) 
 
 ## Chapter 3: Rails Automatic Loading
