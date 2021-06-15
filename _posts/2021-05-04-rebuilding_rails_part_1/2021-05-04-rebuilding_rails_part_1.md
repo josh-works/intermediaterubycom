@@ -654,6 +654,7 @@ index 635e165..fe218c4 100644
 Great! No stick a `pry` in, perhaps at the top of the following methods:
 
 - `Rulers::Application#call`
+- 
 - `Rulers::Application#get_controller_and_action`
 
 _Now that I type these class/methods, I'm not sure why there's in different files. They're both Modules by the title `Rulers`, in the `Application` class._ ¯\\\_(ツ)\_/¯
@@ -673,5 +674,9 @@ I played around with the pry session for 10 minutes, exploring the order by whic
 This all exists in:
 
 [b59c151](https://github.com/josh-works/rulers/commit/b59c151) 
+
+### Exercise 3: Roots and Routes
+
+
 
 ## Chapter 3: Rails Automatic Loading
