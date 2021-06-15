@@ -11,6 +11,8 @@ image: /images/title_image.jpg
 github_issue_id: 8
 ---
 
+_Author's note: This is a very work-in-progress guide, more of a scratchpad than finished page/guide/product/"thing". Please keep that in mind as you read!_
+
 A few weeks ago, I tweeted this thread:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">How long do your tests take to run?<br><br>Some tests suites take 5 minutes. Others take 45 minutes. <br><br>I&#39;ve done work around speeding up tests, and want to test my skills against real-world applications. <br><br>Will you pay me at least $100 to audit your <a href="https://twitter.com/hashtag/RoR?src=hash&amp;ref_src=twsrc%5Etfw">#RoR</a> test suite? <br><br>🧵👇</p>&mdash; Josh Thompson (@josh_works) <a href="https://twitter.com/josh_works/status/1392951464574787600?ref_src=twsrc%5Etfw">May 13, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
@@ -136,5 +138,10 @@ end
 There's a few reasons this high file load time causes problems, some obvious, some subtle. All there is to say is it's worth fixing. It's a big, complicated application, so I'm just capturing my thoughts...
 
 
+[...]
+
+# Conclusion
+
+This guide is a heavy work-in-progress. If you've got questions on anything, leave a comment below. It's hooked up to a Github issue, so it's really just leaving comments via Github. 
 
 
