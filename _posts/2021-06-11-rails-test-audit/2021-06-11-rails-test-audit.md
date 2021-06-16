@@ -30,15 +30,17 @@ This document will be a living guide for how I accomplished the audit (and how I
 
 For one customer, I took a 5 min test suite to 1:10, a 75% reduction in speed, thanks to VCR. I'll show you exactly how I did this.
 
-For another customer, I got a ~20min test suite to ~11min, but it failed when getting pushed to CircleCI, and then the underlying issue (some _really_ slow DB queries) got fixed, and the tests. 
+For another customer, I got a ~20min test suite to ~11min, but it failed when getting pushed to CircleCI, and then the underlying issue (some _really_ slow DB queries) got fixed, so I'm auditing the app a second time, expecting to find a different set of issues.
 
-I'm going to offer all of my lessons learned as this finished guide soon. Preorder the guide for $49, or an upgrade package that will come with at least a 1-hour call, where we talk about your questions, we can screenshare through your codebase, etc.
+For the third customer, the app is huge, complicated, and the tests take so long they don't run the whole suite on a regular laptop - it's delegated to CircleCI, and test runs eat up a lot of credits and time. 
 
-I'm offering this on pre-order, because I've not finished the guide yet! Once the guide is done, especially when I do this again and get a bit more datapoints, I'll raise the rates quite a bit. I don't know when that'll be - could be months from now. 
+I'm going to offer all of my lessons learned as this finished guide soon. Preorder the guide for $49, or an upgrade package that will come with at least a 1-hour call, where we talk about your questions, we can screenshare through your codebase, etc. Any purchaser gets added to my slack group, and you can ping me with questions at any time.
 
-👉 [(A) Partially-Complete Guide to Making Your Rails Tests Run Faster for $49.00 USD](https://buy.stripe.com/fZeaF38kb3RZ73GeUU)
+I'm offering this on pre-order, because I've not finished the guide yet! Once the guide is done )especially when I do this again and get a bit more experienced/sophisticated), I'll raise the rates quite a bit. I don't know when that'll be - could be months from now. 
 
-👉 [The guide + a one-hour phone call for $249.00 USD](https://buy.stripe.com/8wMaF39of2NVfAcdQR)
+👉 [Preorder: (A) Partially-Complete Guide to Making Your Rails Tests Run Faster for $49.00 USD](https://buy.stripe.com/fZeaF38kb3RZ73GeUU)
+
+👉 [Preorder: The guide + a one-hour phone call for $249.00 USD](https://buy.stripe.com/8wMaF39of2NVfAcdQR)
 
 Early adapters will obviously work more closely with me, and vice versa - as I/my written instructions create additional value, I'll (probably) raise my rates.
 
@@ -135,10 +137,38 @@ describe String do
 end
 ```
 
+When I run:
+
+```
+$ time bin/rspec spec/models/string_spec.rb
+
+String
+  should be capitalizeable
+
+Finished in 1.77 seconds (files took 1 minute 40.54 seconds to load)
+1 example, 0 failures
+
+bin/rspec spec/models/string_spec.rb  0.25s user 0.14s system 0% cpu 1:44.37 total
+```
+
 There's a few reasons this high file load time causes problems, some obvious, some subtle. All there is to say is it's worth fixing. It's a big, complicated application, so I'm just capturing my thoughts...
 
+Next, lets use a very sophisticated benchmarking tool to explore this ~2min file load time:
+
+`puts` statements!
+
+See, first, I commented out pretty much everything in `rails_helper`, to try to get the file load time down. 
 
 [...]
+
+### Resources for file load time issues
+
+- [How I got RSpec to boot 50 times faster](https://schwad.github.io/ruby/rails/testing/2017/08/14/50-times-faster-rspec-loading.html)
+- [RSpec load time incredible long on OS X](https://stackoverflow.com/questions/33299812/rspec-load-time-incredible-long-on-os-x)
+- [Testing Rails (by ThoughtBot)](https://gumroad.com/l/testing-rails)
+- [Rails Testing: Files Took ‘x’ Seconds To Load](https://medium.brianemory.com/rails-testing-files-took-x-seconds-to-load-c4cbd4fa53a9)
+- [How Fast is Spring?](https://spring.io/blog/2018/12/12/how-fast-is-spring)
+- []()
 
 # Conclusion
 
