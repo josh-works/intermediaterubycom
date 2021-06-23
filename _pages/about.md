@@ -73,5 +73,6 @@ I'll help you accomplish all this and more.
 
 Start here: 
 
-👉 [github.com/sponsors/josh-works](https://github.com/sponsors/josh-works)
+<script async data-uid="5b13b420e3" src="https://josh-thompson.ck.page/5b13b420e3/index.js"></script>
+
 
